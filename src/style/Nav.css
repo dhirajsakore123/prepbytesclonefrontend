@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.flex{
+    display: flex;
+}
+.flex-coloum{
+    display: flex;  
+    flex-direction: column;
+}
+.nav-container{
+   /* border: 2px solid red; */
+   height: 10.5vh;
+   position: fixed;
+   width: 100vw;
+   top: 0px;
+   background-color: white;
+   z-index: 100;
+  
+}
+.navbar{
+    /* border: 2px solid rgb(0, 17, 255); */
+  width: 100%;
+  height: 100%; 
+  display: flex;
+  box-shadow: 0 3px 6px rgba(0,0,0,.05);;
+}
+.nav1{
+    /* border: 2px solid rgb(0, 17, 255); */
+   width: 30%; 
+   display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prep-logo{
+    width: 40%;
+}
+.nav2{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid rgb(0, 17, 255); */
+    width: 60%; 
+   align-items: flex-end;
+}
+.loginsinup-btn{
+   width: 30%;
+   height: 50%;
+   /* border: 2px solid rgb(0, 17, 255); */
+  display: flex;
+  align-items:flex-end;
+  column-gap:5%;
+}
+.loginsinup-btn-none{
+    display: none;
+}
+.loginsinup-btn button:first-child{
+ width: 30%;
+ height: 70%;
+ border-radius: 5px;
+ border:2px solid #ff219f;
+ background-color: white;
+ color: #ff219f;
+ font-size:0.9rem;
+}
+.loginsinup-btn button:nth-child(2){
+    width: 30%;
+    height: 70%;
+    border-radius: 5px;
+    border:none;
+    background-color: #ff219f;
+    color: white;
+    font-size:0.9rem;
+   }
+   .loginsinup-btn button:first-child:hover{
+    color: black;
+   }
+   .loginsinup-btn button:nth-child(2):hover{
+    color: black;
+   }
+.route-menu{
+    /* border: 2px solid rgb(0, 17, 255); */
+    width: 80%;
+    height: 50%;
+   display: flex;
+   column-gap: 10%;
+  align-items: center;
+  color: #707070;
+}
+.route-menu-full{
+       /* border: 2px solid rgb(0, 17, 255); */
+    width: 100%;
+    height: 100%;
+   display: flex;
+   column-gap: 10%;
+  align-items: center;
+  color: #707070;
+}
+.study-material{
+  
+   
+}
+.course-program{
+  
+}
+.elevation-academey{
+   
+    
+}
+.project{
+    
+   
+}
+.menu-box{
+   cursor: pointer;
+   
+}
+.study-min-menu{
+    /* display: none; */
+    position:absolute;
+    /* top: 9.5vh; */
+    width:230px ;
+    
+    /* border: 2px solid red; */
+   display:flex;
+   flex-direction: column;
+   background-color: white;
+   row-gap: 20px;
+   padding: 10px;
+border-radius: 5px;
+box-shadow: 0px 0px 3px 1px #00000042;
+z-index: 10;
+
+}
+.study-min-menufalse{
+    position: fixed;
+    top: 12vh;
+    width:230px ;
+    /* border: 2px solid red; */
+   display:none;
+   flex-direction: column;
+   row-gap: 20px;
+   padding: 10px;
+border-radius: 5px;
+box-shadow: 0px 0px 3px 1px #00000042;
+}
+.box{
+    border: 2px solid red;
+    height: 20px;
+}
+.study-min-menu div:hover{
+    color: #00a5ec;
+    cursor: pointer;
+}
+
+
+.project-min-menu{
+    position:absolute;
+    /* top: 7vh; */
+    width:180px ;
+    /* border: 2px solid red; */
+   display: flex;
+   background-color: white;
+   flex-direction: column;
+   row-gap: 20px;
+   padding: 10px;
+border-radius: 5px;
+box-shadow: 0px 0px 3px 1px #00000042;
+z-index: 10;
+
+}
+.project-min-menuflase{
+    position: fixed;
+    top: 12vh;
+    width:180px ;
+    /* border: 2px solid red; */
+   display: none;
+   flex-direction: column;
+   row-gap: 20px;
+   padding: 10px;
+border-radius: 5px;
+box-shadow: 0px 0px 3px 1px #00000042;
+}
+.project-min-menu div:hover{
+    color: #00a5ec;
+    cursor: pointer;
+}
+.course-min-menu{
+
+    position:absolute;
+    /* top: 9.5vh; */
+    width:300px ;
+    /* border: 2px solid red; */
+   display:flex;
+   flex-direction: column;
+   background-color: white;
+   row-gap: 20px;
+   padding: 10px;
+ border-radius: 5px;
+ box-shadow: 0px 0px 3px 1px #00000042;
+z-index: 10;
+
+}
+.course-min-menuflase{
+    position: fixed;
+    top: 12vh;
+    width:300px ;
+    /* border: 2px solid red; */
+   display:none;
+   flex-direction: column;
+   row-gap: 20px;
+   padding: 10px;
+ border-radius: 5px;
+ box-shadow: 0px 0px 3px 1px #00000042;
+}
+.course-min-menu div:hover{
+    color: #00a5ec;
+    cursor: pointer;
+  
+}
+
+.home-main{
+    display: flex;
+    flex-direction:column;
+    /* row-gap: 20px; */
+  position: relative;
+  top: 10vh;
+}
+.nav3{
+    display: flex;
+    /* border: 2px solid red; */
+    width: fit-content;
+    cursor: pointer;
+    align-items: center;
+    column-gap: 0.5vw;
+}
+.nav3-false{
+    display: none;
+}
+.profile-dot{
+    width: 40px;
+    height: 40px ;
+    border: 0px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color:#fff;
+    background-color: #03A6EC;
+   
+}
+.profile-name{
+    color:#4b8ce8;  
+    font-size: 1.1rem;
+}

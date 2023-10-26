@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.loginsignup{
+    position: relative;
+    /* width: 100vw; */
+    min-height:95vh ;
+       background-image: url(	https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/blue-background.webp);
+       background-repeat: no-repeat;
+       background-size: cover;
+       display: flex;
+       align-items: center;
+       /* justify-content: center; */
+}
+.login-img{
+    /* border: 2px solid red; */
+    width: 45%;
+    /* background-image: url(../logos/illustrated.webp); */
+    background-repeat: no-repeat;
+    background-position:right;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+   
+}
+.illusion-img{
+  width: 80%;
+}
+
+.middle-box{
+    /* border: 2px solid red; */
+    width: 15%;
+     height: 45vh;
+     position: relative;
+     top: -5vh;
+     display: flex;
+     flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding-bottom: 1vh;
+   
+}
+.pdlogo{
+    width: 35%;
+    position: absolute;
+    top:-5vh;
+
+}
+.inner-box{
+  
+    /* border: 2px solid red; */
+    height: 19%;
+    width: 100%;
+    display: flex;
+   justify-content: space-evenly;
+}
+.inner-img{
+height: 70%;
+/* border: 2px solid red; */
+
+}
+.inner-contentbox{
+    /* border: 2px solid red; */
+    width: 60%;
+}
+.nums{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: rgba(54, 53, 53, 0.884);
+}
+
+
+
+.login{
+    /* border: 2px solid red; */
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: -5vh;
+
+}
+
+
+.container-loginsignup{
+   background-color: white;
+    border-radius: 10px;
+     width: 30vw;
+    min-height:60vh; 
+    border: 2px solid rgb(211, 208, 208);
+    backdrop-filter:blur(20px);
+    color: #162938;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2vh;
+    padding-bottom: 50px;
+    
+ }
+ .toggle-loginsignup{
+     cursor: pointer;
+     text-decoration: underline;
+     color:#4b8ce8;
+    display: inline;
+ }
+ .box1-loginsignup{
+    padding-top: 2vh;
+   border-bottom: 1px solid #4b8ce8;
+    height: 8vh;
+    display: flex;
+    align-items:flex-end;
+    width:70%;
+    /* column-gap: 2vw; */
+    /* justify-content: space-around; */
+    font-size: 1.2rem;
+
+    
+ }
+ .signup-heading{
+    width: 50%;
+   padding-bottom: 2vh;
+ 
+   text-align: center;
+  cursor: pointer;
+ }
+.login-heading{
+    width: 50%;
+    padding-bottom: 2vh;
+    text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  color:#4b8ce8 ;
+  border-bottom: 2px solid #4b8ce8;
+}
+.signup-heading1{
+    width: 50%;
+   padding-bottom: 2vh;
+   font-weight: 500;
+  color:#4b8ce8 ;
+   border-bottom: 2px solid #4b8ce8;
+ 
+   text-align: center;
+  cursor: pointer;
+ }
+.login-heading1{
+    width: 50%;
+    padding-bottom: 2vh;
+    text-align: center;
+  cursor: pointer;
+}
+
+.signuplogin-heading{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:#767779;
+    
+}
+ .box-loginsignup{
+     display: flex;
+     flex-direction: column;
+     justify-content:left;
+     width: 70%;
+     /* border: 2px solid red; */
+ }
+ .box-loginsignup1{
+    display: flex;
+  
+    justify-content:left;
+    width: 70%;
+    column-gap: 2vw;
+    /* border: 2px solid red; */
+}
+ label{
+     font-size: 1rem;
+     font-weight: 600;
+ }
+ .input-loginsignup{  
+ border: 0px ;
+ border-bottom: 2px solid  #162938;
+ height: 5vh;
+ background-color: transparent;
+ font-size: 15px;
+ }
+ .input-loginsignup1{  
+    border: 0px ;
+    border-bottom: 2px solid  #162938;
+    height: 5vh;
+    background-color: transparent;
+    font-size: 15px;
+    width: 80%;
+    }
+ .input-loginsignup:focus{  
+    outline: none;
+    background-color: transparent;
+    
+ }
+ .input-loginsignup1:focus{  
+    outline: none;
+    background-color: transparent;
+    
+ }
+ .button-loginsignup{
+     height: 5vh;
+     border-radius: 6px;
+     font-size: 1rem;
+     background-color:#4b8ce8;
+     color: white;
+     font-weight: 500;
+     border: #4b8ce8;
+ 
+ }
