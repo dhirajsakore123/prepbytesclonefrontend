@@ -29,8 +29,8 @@ const Navbar = () => {
                </div>
 
                  <div className={study?'study-min-menu':'study-min-menufalse'} >
-                   <div>Mock Tests</div>
-                   <div>Video Tutorial</div>
+                   <div onClick={()=>navigate('/mock')}>Mock Tests</div>
+                   <div onClick={()=>navigate('/video')}>Video Tutorial</div>
                  </div>
             </div>
 
@@ -41,7 +41,7 @@ const Navbar = () => {
 
               <div className={course?'course-min-menu':'course-min-menuflase'}>
                 <div>Master Competitive Programming</div>
-                <div>Full Stack Program</div>
+                <div onClick={()=>navigate('/fullstack')}>Full Stack Program</div>
               </div>
             </div>
 
@@ -67,6 +67,7 @@ const Navbar = () => {
             </div>
         </div>
       </div>
+
       <div className={loggedIn?'nav3':'nav3-false'} onClick={handelLogout}>
        <div className='profile-dot'>D</div>
        <div className='profile-name'>Hi Dhiraj</div>

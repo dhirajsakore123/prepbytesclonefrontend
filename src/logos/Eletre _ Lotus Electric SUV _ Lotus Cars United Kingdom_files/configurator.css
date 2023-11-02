@@ -1,0 +1,268 @@
+.configurator-holder {height:100vh; height:100dvh; position:relative; width:100%; overflow: hidden; z-index: 20; }
+.configurator-holder .vue-configurator { position:absolute;}
+
+
+
+
+.vue-configurator {height:100%; width:100%; background: #4F4F4F;  color:#FFF;  position: relative;}
+
+.vue-configurator .vehiclecanvas {width:100%;}
+.vue-configurator .imagery .vehiclecanvas { background-color: transparent; position:absolute; left:0; top:0; width:100%; height:100%; z-index:3;}
+
+.vue-configurator .controls {height:100vh; transform: translateX(300px); display:flex; position:absolute; top:0; right:0; z-index: 4; 
+	transition: all 0.5s cubic-bezier(0,0.75,0.25,1); backdrop-filter:blur(16px); -webkit-backdrop-filter: blur(16px); }
+.vue-configurator .controls.active {transform: translateX(0);}
+.vue-configurator .controls.active ~ .imagery {transform: translateX(-150px);}
+
+.vue-configurator .iconbar {display:flex; flex-direction: column; height:100%; width:3.5rem; background: rgba(0,0,0,0.5); }
+.vue-configurator .iconbar .spacer {flex-grow: 1;}
+.vue-configurator .iconbar > * {font-size:1.3rem; width: 100%; width:3.5rem; height: 3.5rem; display: flex; justify-content: center; 
+    align-items: center; transition: all 0.5s; font-weight: 100;}
+.vue-configurator .iconbar i {position: relative;}
+.vue-configurator .iconbar .badge {font-family: sans-serif; font-size:10px; background: #fff200; color:#000; border-radius: 20px; padding: 2px 4px;
+    position: absolute; top:75%; left:75%; font-weight: bold; }
+.vue-configurator .iconbar > a:not(.primary):hover {background:rgba(255,242,0,.1); color:#FFF;}
+.vue-configurator .iconbar > a:not(:first-child).active {background:#000;}
+.vue-configurator .iconbar > a.primary {background: #FFF200; color:#000;}
+.vue-configurator .iconbar > a.primary:hover {background: #000; color:#FFF200;}
+
+.vue-configurator .controls h5 {font-weight:100; padding:0 1.5rem 0;}
+.vue-configurator .controls .panels {width:300px; background: rgba(0,0,0,0.75);}
+.vue-configurator .controls .panels .panel__content {height: 100vh; display: flex; flex-direction: column; overflow:hidden; padding-top:0.5rem;}
+.vue-configurator .controls .panels .panel {overflow-y:auto; height:100%;}
+.vue-configurator .controls .panels .group-label {letter-spacing: 1px; font-size:1rem; margin: 0 1rem; font-weight: 300; display: flex; padding:0.5rem 0;
+	justify-content: space-between; min-height: 40px;}
+.vue-configurator .controls .panels .group-label i {transition: all 0.35s cubic-bezier(0,0.75,0.25,1);}
+.vue-configurator .controls .panels .optiongroup.active .group-label i {transform: rotate(180deg);}
+.vue-configurator .controls .panels .subgroup-label {letter-spacing: 1px; font-size:0.75rem; margin: 0.25rem 1rem;}
+.vue-configurator .controls .panels .optiongroups {flex-grow:1; overflow:auto;}
+.vue-configurator .controls .panels .subgroup {border-bottom:2px solid rgba(0,0,0,0.15); margin-bottom: 0.25rem; min-height: 40px; max-height: 40px;
+	display: flex; flex-direction: column; transition: all 0.35s cubic-bezier(0,0.75,0.25,1); overflow: hidden; margin-left: 0.5rem; margin-right: 0.5rem; }
+.vue-configurator .controls .panels .subgroup.active {max-height: none;}
+.vue-configurator .controls .panels .subgroup ol, .vue-configurator .controls .panels .optiongroup ul {list-style: none; margin: 0; padding:0 0.5rem 1rem;}
+.vue-configurator .controls .panels .optiongroup .subgroup {display: flex; flex-direction: column; margin: 0.25rem 0 0.5rem;}
+.vue-configurator .controls .panels button {border-radius: 5px; padding: 0.5rem; margin-bottom: 0.5rem; display: flex; flex-direction: column; background: transparent;
+	transition: all 0.5s cubic-bezier(0,0.75,0.25,1); justify-content: flex-end; position:relative; border:1px solid rgba(255,255,255,0.2);
+	color:rgba(255,255,255,0.5); width:100%; box-shadow: 0 0 10px rgba(0,0,0,0.25); cursor: pointer; overflow: hidden;}
+.vue-configurator .controls .panels button:hover, .vue-configurator .controls .panels button.active {color:#FFF;}
+.vue-configurator .controls .panels button.disabled {pointer-events: none; opacity: 0.5;}
+.vue-configurator .controls .panels button .vehiclecanvas {margin-bottom: 0.5rem;}
+.vue-configurator .controls .panels button i.selector {font-size:1.5rem; transition: all 0.5s cubic-bezier(0,0.75,0.25,1);}
+.vue-configurator .controls .panels button.not-deselectable i.selector {color:#999;}
+.vue-configurator .controls .panels button span.button__content {padding:2px 5px; display: flex; width: 100%; justify-content: space-between; align-items: center; position: relative; gap:1rem;  }
+.vue-configurator .controls .panels button span.info {font-size:0.8125rem; text-align: left; font-weight: 300; padding: 0.5rem 1rem; line-height: 1.4em; }
+.vue-configurator .controls .panels button.active {border-color: rgba(255,255,255,0.4); }
+.vue-configurator .controls .panels button:not(.swatch):not(.image).active {background-color: rgba(255,255,255,0.25); border:none;}
+.vue-configurator .controls .panels button label {font-size:0.875rem; text-align: left; display: flex; flex-direction: column; font-weight: 300; 
+        text-transform: none; flex-grow:1; line-height: 1.4em;}
+.vue-configurator .controls .panels .panel.viewpoints button label, .vue-configurator .controls .panels .panel.environments button label {text-transform: uppercase;}
+.vue-configurator .controls .panels button label span.price {font-size:0.75rem;}
+.vue-configurator .controls .panels button i.fa-circle-info {cursor: pointer; font-size:1.5rem;}
+.vue-configurator .controls .panels button.type-material {padding: 0;}
+.vue-configurator .controls .panels button.type-material span.button__content {padding:0.5rem; }
+.vue-configurator .controls .panels button.type-material img, .vue-configurator .controls .panels button.type-image img 
+    {width:100%; height: 100%; object-fit: cover; left: 0; top:0;}
+
+.vue-configurator .imagery {transition: all 0.5s cubic-bezier(0,0.75,0.25,1); width: 100%; height: 100%; position: relative; }
+.vue-configurator .imagery > * {width:100%; height:100%;}
+.vue-configurator .vehiclecanvas {position:relative;}
+.vue-configurator .imagery .vehiclecanvas { background-color: transparent; position:absolute; left:0; top:0; width:100%; height:100%; z-index:3;}
+.vue-configurator .imagery .vehiclecanvas canvas {cursor:grab; }
+.vue-configurator .vehiclecanvas canvas, .vue-configurator .swatch canvas  {object-fit: cover; width:100%; height: 100%; transition: all 0.5s ; display:block;}
+.vue-configurator .vehiclecanvas .loadingbar, .vue-configurator .swatch .loadingbar {position:absolute; left:50%; top:50%; transform: translate(-50%,-50%); opacity: 0; transition-delay: 0.25s; z-index: 10;}
+.vue-configurator .vehiclecanvas.dirty .loadingbar, .vue-configurator .swatch.dirty .loadingbar {opacity: 1;}
+.vue-configurator .vehiclecanvas.dirty canvas, .vue-configurator .swatch.dirty canvas {filter: brightness(50%); transition-delay: 0.25s;}
+.vue-configurator .interiorcanvas { background-color: transparent; position:absolute; left:0; top:0; width:100%; height:100%; z-index:3;}
+.vue-configurator .interiorcanvas canvas {object-fit: cover; width:100%; height: 100%; cursor:grab;}
+.vue-configurator .swatch {position: relative; width:100%; margin-bottom: 6px;}
+.vue-configurator .swatch canvas {width:100%;}
+.vue-configurator canvas.fader {position:absolute; top:0; left:0; width:100%; height: 100%; transition:opacity 0s;}
+.vue-configurator canvas.fader.fade {opacity:0; transition-duration: 0.5s;}
+.vue-configurator .panorama {width:100%; height:100%; position:absolute; top:0; left:0;}
+.vue-configurator .panorama canvas {width:100%; height:100%; object-fit: cover; }
+.vue-configurator .panorama .loading {position:absolute; top:50%; left:50%; color:#FFF; z-index:2; transform: translateX(-50%) translateY(-50%);}
+.vue-configurator .panorama .loading img {width:64px; height:64px; animation-name: spin; animation-duration: 2000ms; animation-iteration-count: infinite; animation-timing-function: linear;}
+ @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.vue-configurator video {width:100%; height:100%; position:absolute; top:0; left:0; object-fit:cover; z-index:3;}
+.vue-configurator .vehiclevideo {width:100%; height:100%; position:absolute; top:0; left:0; object-fit:cover; z-index:3;}
+.vue-configurator .vehiclevideo video {opacity: 0; transition: opacity 2s;}
+.vue-configurator .vehiclevideo video.active {z-index:1; opacity: 1;}
+.vue-configurator .vehiclevideo video.removing {z-index:0; opacity:1;}
+
+.vue-configurator .loadingbar {position: absolute; bottom: 0; left: 0; right:0; height: 5px;}
+.vue-configurator .loadingprogress {position: absolute; left: 0; top:0; height: 100%; background: #FFF200; z-index: 99;}
+
+.configurator-holder.nocontrols .controls {display: none;}
+.vue-configurator nav.viewpoints {position: absolute; bottom:5rem; left: 50%; transform: translateX(-50%);
+    z-index: 91; }
+.configurator-holder.nocontrols nav.viewpoints {bottom:2rem;}
+@media screen and (max-width: 39.9375em) {
+    .vue-configurator nav.viewpoints {bottom:auto; top:35vw; transform: translate(0,-50%); width:100%; left:0;}
+    .vue-configurator nav.viewpoints .navigation__content {width: 100%; background: transparent !important; justify-content: space-between; }
+}
+@media screen and (min-width: 40em) {
+    .configurator-panel-open .vue-configurator nav.viewpoints ol {left:calc(50% - 150px);}
+    .vue-configurator .iconbar {padding: 2rem 0;}
+}
+
+@media screen and (max-width: 63.9375em) and (max-height:40em) {
+    .vue-configurator .controls .panels .panel__content {height: auto;}
+    .vue-configurator .controls .panels .optiongroups {height: auto;}
+    .vue-configurator .controls .panels .optiongroup.active, .vue-configurator .controls .panels .optiongroup {max-height: none;}
+    .vue-configurator .controls .panels .optiongroup ol, .vue-configurator .controls .panels .optiongroup ul {overflow: hidden;}
+    .vue-configurator .controls .panels .group-label i {display: none;}
+}
+
+@media screen and (max-width: 39.9375em) {
+    .vue-configurator {display:flex; flex-direction: column;}
+    .vue-configurator .imagery {order: 1; height: 70vw; max-height: 40vh;}
+    .vue-configurator .loadingbar {position:relative; order: 2; z-index: 5; flex-shrink: 1; margin-top: -5px; z-index: 2;}
+    .vue-configurator .controls {position:static; order: 3; flex-grow: 1; height: 55%; height: calc(100% - 70vw); flex-direction: column; transform: none;}
+    .vue-configurator .iconbar {flex-direction: row; width:100%; height: auto;}
+    .vue-configurator .iconbar > * {height: 3rem; }
+    .vue-configurator .iconbar > *.active {color:#FFF200 !important; border-bottom: 2px solid #FFF200;}
+    .vue-configurator .controls .panels {width:100%; flex-grow: 1; height: 50%;}
+    .vue-configurator .controls .panels .panel__content {height: auto;}
+    .vue-configurator .controls.active ~ .imagery {transform: none;}
+    .vue-configurator .controls:not(.active) .panel.options {display:block !important; height: 100%;}
+    .vue-configurator .panel.options h5 {display: none;}
+    .vue-configurator .controls .panels .optiongroups {height: 100%; padding-bottom: 3rem;}
+    .vue-configurator .controls .panels .optiongroup.active, .vue-configurator .controls .panels .optiongroup {max-height: none;}
+    .vue-configurator .controls .panels button.image {height:125px;}
+    .vue-configurator nav.viewpoints a {top:35vw;}
+    .vue-configurator nav.viewpoints a.next {right:1.5rem; }
+    .vue-configurator nav.viewpoints ol {display:none;}
+        
+}
+@media screen and (min-width: 40em) {
+    .vue-configurator .controls .panels .optiongroups, .vue-configurator .controls .panels {overscroll-behavior:contain;}
+    .vue-configurator .controls .panels .optiongroup ol, .vue-configurator .controls .panels .optiongroup ul {overflow-y: auto; overscroll-behavior:none;}
+}
+
+
+.panel.share img {margin-bottom:0; width:100%;}
+.panel.share a.button.primary {width:100%; display: flex; justify-content: space-between;}
+.panel.share .social {display: flex; justify-content: space-between; margin: 1rem 0; }
+.panel.share .social .button {width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: #000; color:#FFF200;
+    padding: 0; font-size: 1.6rem;}
+.panel.share .social .button:hover {color:#000; background: #FFF200;}
+
+
+#savecode {font-size: 1.6rem !important; text-align: center;}
+.savecode-wrap {display: flex; margin-bottom: 1rem;}
+.savecode-wrap input {margin: 0 !important; height: 100%;}
+.savecode-wrap .lotus-button {cursor: pointer; padding: 0 0.5rem 0 1rem !important; text-align: center; margin: 0; }
+.savecode-wrap i {font-size:1.4rem;}
+
+
+#loadcode {font-size: 1.6rem !important; text-align: center;}
+.loadcode-wrap {display: flex; margin-bottom: 1rem;}
+.loadcode-wrap input {margin: 0 !important; height: 100%;}
+.loadcode-wrap .lotus-button {cursor: pointer; padding: 0 0.5rem 0 1rem !important; text-align: center; margin: 0; }
+.loadcode-wrap i {font-size:1.4rem;}
+
+
+
+.has-overlay .configurator-overlay {opacity:1; pointer-events:all;}
+.configurator-holder .configurator-overlay {position:absolute; top:0; right: 0; width:100%; height:100%; z-index:10; 
+	background:rgba(255,255,255,0.65); transition: all 0.5s; opacity: 0; pointer-events: none; }
+.configurator-holder .configurator-overlay .holder {background:#4F4F4F;}
+.configurator-holder .configurator-overlay .grid-x {height:100%;}
+.configurator-holder .configurator-overlay > .grid-x > .cell { }
+.configurator-holder .configurator-overlay .cell {padding:0.5em 0.5em; }
+.configurator-holder .configurator-overlay label {font-size:1.4rem; }
+.configurator-holder .configurator-overlay .button {margin-right:0 !important; text-align:left;}
+.configurator-holder .configurator-overlay p {margin: 0; font-size: 0.85em; line-height: 1.2em; text-transform: uppercase;}
+.configurator-holder .configurator-overlay table tr {background:transparent;}
+.configurator-holder .configurator-overlay table tr:not(:last-child) {border-bottom:1px solid rgba(0,0,0,0.25); }
+.configurator-holder .configurator-overlay table td {vertical-align: middle; line-height: 1.2em;}
+.configurator-holder .configurator-overlay table td:first-child {white-space: nowrap;}
+
+.has-overlay .configurator-holder .configuratorprogress, .has-overlay .configurator-holder .configurator-cta
+	{ display: none;}
+@media screen and (min-width: 64em) {
+    .configurator-holder .configurator-overlay > .grid-x > .cell {min-width:700px;}
+    .configurator-holder .configurator-overlay table {margin: 0; font-size: 0.9em;}
+    .configurator-holder .configurator-overlay {padding-left: 80px; }
+}
+@media screen and (max-width: 63.9375em) {
+    .configurator-holder .configurator-overlay table {margin: 0; font-size: 0.85em;}
+    .configurator-holder .configurator-overlay h4 {font-size:1.3em; font-weight: 300;}
+    .configurator-holder .configurator-overlay .cell {padding:0.25em;}
+    .configurator-holder .configurator-overlay .button {padding: 0.75em 1em 0.5em;}
+}
+@media screen and (max-width: 39.9375em) {
+    .configurator-holder .configurator-overlay table tr {display:flex; flex-direction:row; flex-wrap:wrap; padding: 0.5rem 0}
+    .configurator-holder .configurator-overlay table td {padding:0.25rem 0.625rem 0.325rem; }
+    .configurator-holder .configurator-overlay table td:first-child {flex-grow: 1;}
+    .configurator-holder .configurator-overlay table td:last-child {flex-basis:100%;}
+    .configurator-holder .configurator-overlay table tr a.button {width:100%;}
+}
+
+
+
+.configurator-holder .configurator-cta {position:absolute; bottom: 0; right:0; z-index: 90; overflow: hidden; background: rgba(0,0,0,0.75);
+    transition: all 0.5s cubic-bezier(0,0.75,0.25,1); width:100%; pointer-events: none;  }
+.configurator-holder .configurator-cta .__content {height:3.5rem; width: 100%; display: flex; justify-content: center; color:#FFF; }
+.configurator-holder .configurator-cta .__content .lotus-button.type-secondary {border-width:0; border-right:1px solid rgba(255,255,255,0.25); }
+.configurator-holder .configurator-cta.active {z-index: 90;  }
+.configurator-panel-open .configurator-holder .configurator-cta {right:300px; left:0; width:auto}
+.configurator-holder .configurator-cta .spacer {flex-grow:1; width:0; transition: all 0.4s cubic-bezier(0,0.85,0.25,1);}
+.configurator-holder .configurator-cta.active .spacer {width:50%;}
+.configurator-holder .finance-pricing {border-left: 1px solid rgba(255,255,255,0.25);}
+.configurator-holder .configurator-cta .lotus-button.type-primary {margin: 0; height: 100%;}
+.configurator-holder .configurator-cta a {pointer-events: all; }
+.configurator-holder .button.secondary.dark {color:#FFF;}
+.configurator-holder .lotus-configurator-pricing {padding:0 1rem; display: flex; position: relative; align-items: center;  }
+.configurator-holder .lotus-configurator-pricing .price {font-size:1.6em; font-weight: 300; line-height: 1em; display: inline-block; white-space: nowrap;}
+.configurator-holder .lotus-configurator-pricing .information {font-size:0.65em; position: absolute; text-align: right; bottom:0; left:0; width:100%; 
+	line-height: 1.2em; padding: 2px 15px; white-space: nowrap;}
+.configurator-holder .lotus-configurator-pricing i {font-size:12px; vertical-align: super;}
+.configurator-holder .lotus-configurator-pricing .codicil {font-size:0.75em; margin: 0 0 1em auto; max-width:120px; line-height: 1.2em; position: relative;  }
+.configurator-holder .lotus-configurator-pricing .finance {font-size:0.9em; border-top:1px solid #FFF; padding-top:1em;}
+.configurator-holder .lotus-configurator-pricing .finance .price {display:block; line-height: 1.2em; margin: 0;}
+.configurator-holder .lotus-configurator-pricing .finance .action {text-transform: uppercase;}
+.configurator-holder .finance-pricing {position:relative; display: flex;}
+@media screen and (max-width: 39.9375em) {
+    .configurator-holder {display:flex; flex-direction: column;}
+    .configurator-holder .configurator-cta, .configurator-holder .vue-configurator {position:static;}
+    .configurator-holder .vue-configurator {height:75%; flex-grow: 1;}
+    .configurator-holder .configurator-cta  {background: #000 !important; }
+    .configurator-holder .configurator-cta .__content  {height:auto; flex-wrap:wrap; align-items: flex-end; }
+    .configurator-holder .configurator-cta .__content .button.secondary {padding-left:0; padding-right: 0; text-align: center; flex-grow: 1; width: 25%;}
+    .configurator-holder .configurator-cta.hide-for-medium {position: absolute; bottom:0; left: 0; right: 0; top:auto;}
+    .configurator-holder .configurator-cta .if-active {display: none;}
+    .configurator-holder .configurator-cta.active .if-active {display: block;}
+    .configurator-holder .lotus-configurator-pricing .price {font-size:1.2rem;}
+    .configurator-holder .configurator-cta .lotus-button.type-primary {padding-top: 0.7rem; padding-bottom: 0.6rem; flex-grow:1; justify-content: center;}
+    .configurator-holder .configurator-cta .__content > div {height:48px;}
+}
+
+@media screen and (max-width: 63.9375em) and (max-height:40em) {
+    .configurator-holder .configurator-cta .__content {height: 3rem;}
+}
+
+
+.configurator-holder .panel.stock {}
+.configurator-holder .panel.stock h5 {line-height: 1em;}
+.configurator-holder .panel.stock h5 span {display: block; font-size:0.875rem;}
+.configurator-holder .panel.stock .stock-vehicles {height: 100%; overflow-y: auto;}
+.configurator-holder .panel.stock .stock-vehicle {margin: 0.5rem; padding: 0.5rem; background-color:rgba(255,255,255,0.25); border-radius:5px; }
+.configurator-holder .panel.stock img {width:100%;}
+.configurator-holder .panel.stock .vehicle__title {display: flex; gap:0.5rem; padding: 0.5rem 1rem 1rem;}
+.configurator-holder .panel.stock .vehicle__title small {line-height: 1.2em;}
+.configurator-holder .panel.stock .vehicle__title label {font-size:1.2rem; display: block;}
+.configurator-holder .panel.stock .vehicle__title div {flex-grow: 1;}
+.configurator-holder .panel.stock .vehicle__details {padding: 0 1rem 0;}
+
+
+.configuration-conflict {}
+.configuration-conflict h5 {margin-bottom: 1em;}
+.configuration-conflict dd {display: flex; gap:1rem; align-items: center;  }
+.configuration-conflict dl.include {color:#16BAC5;}
+.configuration-conflict dl.exclude {color:#EF3E36;}
+.configuration-conflict .buttons {gap:1rem; display: flex;}
+@media screen and (max-width: 63.9375em) {
+    .configuration-conflict {top:0; transform: none; left:0; max-height: 100vh; max-width: 100%; width:100%; height: 100%;
+        display: flex; flex-direction: column; justify-content: center; }
+}

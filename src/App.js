@@ -7,11 +7,12 @@ import Footer from './routing/Footer'
 
 const App = () => {
   return (
+    
     <div>
       <div className='nav-container'>
           <Navbar/>      
       </div>
-<div className='home-main'>
+     <div className='home-main'>
       <div className='mid-cont'>
         <Routing/>
       </div>
@@ -19,7 +20,7 @@ const App = () => {
      <div className='footer'>
       <Footer/>
      </div>
-</div>    
+</div>     
     </div>
   )
 }

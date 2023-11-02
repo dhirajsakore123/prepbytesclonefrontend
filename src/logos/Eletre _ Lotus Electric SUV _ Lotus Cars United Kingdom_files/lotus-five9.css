@@ -1,0 +1,41 @@
+body .five9-frame {z-index:2; position: static !important; width:100% !important;}
+
+body #five9-maximize-button {position: fixed; top:1.7rem; left:1.5rem; padding: 0; background: transparent; z-index:101; 
+    transition: all 0.5s cubic-bezier(0,0.66,0.33,1);}
+body #five9-maximize-button {display:none;}
+body #five9-maximize-button .five9-icon {display: none;}
+body #five9-maximize-button .five9-text {display:none; }
+body #five9-maximize-button:after {
+	font-family: "Font Awesome 6 Pro"; 
+	color:#4F4F4F;
+    font-weight: 900; 
+	font-size:1.5rem;
+    content: "\f4a3";
+}
+body.navigation-dark .show-help {opacity:0;}
+body.navigation-dark.ready .show-help {opacity: 1; transition: opacity 0.5s 3s;}
+
+body.theme-dark #five9-maximize-button:after, body.navigation-dark #five9-maximize-button:after, body.navigation-dark .show-help {
+	color:#FFF;
+}
+body.navigation-light:not(.short-header) .show-help {
+	color:#000;
+}
+body.short-header #five9-maximize-button {top:1rem; left:1rem;  }
+body.short-header #five9-maximize-button:after {color:#FFF;}
+.has-modal #five9-maximize-button:after {opacity: 0;}
+
+@media screen and (max-width: 39.9375em) {
+    body #five9-maximize-button {top:1rem; left:1rem;  }
+}
+
+
+#five9-frame-full {z-index: 10; position: static;}
+.five9-frame #five9-frame-full #embedded-frame {box-shadow: none; width: 100% !important; height: 400px;}
+
+body .five9-header {margin-bottom: -1px; display: none; }
+body .five9-chat-button {background:#000; border-radius: 0; display: flex; }
+body .five9-chat-button .five9-text {flex-grow: 1; opacity: 0;}
+
+body .five9-frame #five9-popout-button {display: none;}
+

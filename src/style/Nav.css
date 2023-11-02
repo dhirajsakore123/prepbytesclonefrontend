@@ -92,11 +92,13 @@
     width: 100%;
     height: 100%;
    display: flex;
-   column-gap: 10%;
+   column-gap: 8%;
+   justify-content: flex-end;
   align-items: center;
   color: #707070;
+  padding-right: 3vw;
 }
-.study-material{
+/* .study-material{
   
    
 }
@@ -110,7 +112,7 @@
 .project{
     
    
-}
+} */
 .menu-box{
    cursor: pointer;
    
@@ -229,10 +231,11 @@ z-index: 10;
 .nav3{
     display: flex;
     /* border: 2px solid red; */
-    width: fit-content;
+    width: 15%;
     cursor: pointer;
     align-items: center;
     column-gap: 0.5vw;
+    
 }
 .nav3-false{
     display: none;

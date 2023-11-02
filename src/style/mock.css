@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.mocktext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mocktext-first{
+    background-image: linear-gradient(180deg,#3969ad,#1d3557);
+    height: 30vh;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mocktext-first-inner{
+    box-sizing: border-box;
+    padding-top: 20px;
+    /* border: 2px solid red; */
+    width: 82%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10%;
+
+}
+.mocktext-first-heading{
+    font-size:2rem;
+    font-weight: 500;
+    color: #fff;
+}
+.mocktext-first-text{
+    font-size:1rem;
+    /* font-weight: 500; */
+    color: #fff;
+    width: 50%;
+}
+.mocktext-second{
+    height: 14vh;
+    /* border: 2px solid red; */
+    width:85%;
+   color: #22559c;
+   display: flex;
+   align-items: center;
+   font-size: 1.8rem;
+}
+.mocktext-third{
+    width:85%;
+/* position: relative; */
+display: flex;
+align-items: center;
+justify-content: center;
+height: 0px;
+    border: 2px solid #22559c;
+}
+.mocktext-third-text{
+   background-color: #fff;
+   width: 20%;
+   text-align: center;
+   color:  #ffa000;
+   font-size: 1.2rem;
+}
+.mocktext-forth{
+    min-height: 100vh;
+    width:85%;
+    /* border: 2px solid #22559c; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 4vh;
+    padding: 10vh 0vh;
+
+}
+.mocktext-forth-cards{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 300px;
+    height: 370px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(95,141,196,.2);
+    border-radius: 5px;
+    background-image: linear-gradient(180deg,#e0ebf9,#fff 54%,#fff);
+}
+.mocktext-forth-cards-first{
+    /* border: 2px solid red; */
+    width: 85%;
+    /* height:7vh; */
+    display: flex;
+    justify-content: space-between;
+}
+.mocktext-forth-cards-img{
+    width: 30%;
+}
+.mocktext-forth-cards-name{
+    width: 90%;
+    color: #3c72bd;
+   text-align: center;
+   font-weight: 470;
+    font-size: 1.2rem;
+}
+.mocktext-forth-cards-box{
+    /* border: 2px solid red; */
+    width:100% ;
+    height: 70px;
+    display: flex;
+
+}
+.mocktext-forth-cards-box-inner{
+    /* border: 2px solid red; */
+     width: 33%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: #707070;
+   row-gap: 1vh;
+    
+}
+.mocktext-forth-cards-box-inner-middle{
+    border-left: 3px solid #e0ebf9;
+    border-right:3px solid #e0ebf9;
+    width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #707070;
+  row-gap: 1vh;
+}
+.mocktext-forth-cards-date1{
+    font-weight: 500;
+}
+    
+.mocktext-forth-cards-date2{
+    font-size: 0.8rem;
+}
+.mocktest-card-btn{
+    background-color: #22559c;
+    color: #fff;
+    width: 50%;
+    height: 12%;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(95,141,196,.2);
+    font-size: 1rem;
+    border: none;
+}

@@ -1,0 +1,134 @@
+
+/*		FINANCE			*/
+.lotus-checkout {width:100%; height:100%; background: #13181F; min-height: 75vh;
+    display: flex; flex-direction: column; transition: all 0.25s cubic-bezier(0,0.75,0.25,1); }
+.lotus-checkout.active {transform:translateY(0); z-index: 101;}
+.lotus-checkout .title {margin:1rem 1rem; font-size:1rem; text-transform: uppercase; display:flex; gap:2rem; }
+.lotus-checkout .title i {line-height:1em; display: block;}
+.lotus-checkout h5 {margin-bottom: 0.5em; margin-top: 0.5em;}
+.lotus-checkout ol.progression {display:flex; margin: 0; padding: 0 2rem; position: sticky; top:0; left:0; width:100%; border-bottom: 1px solid #000; background: #fff; z-index: 2;}
+.lotus-checkout ol.progression li {padding: 12px 1.6rem 14px 15px ; list-style: none; text-transform:uppercase; transition: all 0.5s; cursor:pointer;}
+.lotus-checkout ol.progression li:after {content:"\f054"; font-family: "Font Awesome 6 Pro"; font-weight: 400; color:#000; font-size:100%; 
+    transform:translate(12px,0); display:inline-block;}
+.lotus-checkout ol.progression li:hover {background:#FFF200; color:#000; }
+.lotus-checkout ol.progression li:hover a {color:#000;}
+.lotus-checkout ol.progression li.active {background:#FFF200; color:#000; }
+.lotus-checkout ol.progression li.complete {color:#000; }
+.lotus-checkout .texture {display:flex; flex-direction:column; height:100%; }
+.lotus-checkout .texture > h3 {flex-shrink:1; padding: 0 2rem;  color:#FFF; }
+.lotus-checkout .pages {padding: 2rem 2rem 3rem; }
+.lotus-checkout .products label, .lotus-checkout .delivery label {font-size:1rem; padding: 1rem; background:#f3f3f3; margin-bottom: 1rem; cursor:pointer; transition:all 0.5s; }
+.lotus-checkout .products label:hover, .lotus-checkout .delivery label:hover { background:#E3E3E3; }
+.lotus-checkout .products label.selected, .lotus-checkout .delivery label.selected { background:#FFF200 !important; }
+.lotus-checkout .products label h5, .lotus-checkout .delivery label h5 {font-size:1.4rem; margin:0.5rem 0 0.75rem; }
+.lotus-checkout .products label p, .lotus-checkout .delivery label p {text-transform:none; font-size:0.85rem;}
+.lotus-checkout .products .product {display:flex; align-items:center;}
+.lotus-checkout .products .product div {flex-grow:1;}
+.lotus-checkout .products .product video {width:33%; max-width:300px; margin-left:2em; }
+.lotus-checkout .delivery .price {font-size:1.4em;}
+.lotus-checkout .calculator {flex-grow: 1; overflow-y:auto; background: #FFF; -webkit-overflow-scrolling: touch;}
+.lotus-checkout .calculator > div {border-top:1px solid #CCC; }
+.lotus-checkout .calculator > div:first-child {border-top:none;}
+.lotus-checkout input[type=range] {width:100%; display: block;}
+.lotus-checkout .actions {flex-direction: row !important;}
+.lotus-checkout .buttons {display:flex; flex-direction: row; margin:0 -5px; flex-grow:1; }
+.lotus-checkout .pages .buttons {flex-wrap: wrap;}
+.lotus-checkout .buttons > * {margin:5px; flex-wrap:nowrap;}
+.lotus-checkout .button.small {font-size:0.85em; padding-top:0.7em; padding-bottom:0.5em; padding-left: 2em; }
+.lotus-checkout .partexchange-vehicle {background:#f3f3f3; padding:1em; margin:1em 0; }
+.lotus-checkout .partexchange-vehicle .question {border-bottom: 1px dashed #CCC; margin-bottom: 1em; padding-bottom: 1em;}
+.lotus-checkout .partexchange-vehicle .question label {text-transform: none; font-size:1rem;}
+.lotus-checkout .partexchange-vehicle .question.select::after {content:none;}
+.lotus-checkout .partexchange-vehicle .question .question-select {display:flex; flex-wrap:wrap;}
+.lotus-checkout .partexchange-vehicle .question .question-select .question-select-option {vertical-align: middle; }
+.lotus-checkout .partexchange-vehicle .question .question-select .question-select-option.selected { background:#FFF200 !important; }
+.lotus-checkout .partexchange-vehicle .question:not(.hasdescription) {padding-bottom: 1em;}
+.lotus-checkout .partexchange-vehicle .question:not(.hasdescription) label {margin-right: 0.5em;}
+.lotus-checkout .partexchange-vehicle .question:not(.hasdescription) .question-select input {margin-bottom: 0;}
+.lotus-checkout .partexchange-vehicle .question.hasdescription .question-select {flex-direction: row;}
+.lotus-checkout .partexchange-vehicle .question.hasdescription .question-select .question-select-option
+	{flex-grow:1; width:20%;  background: #f3f3f3; padding: 1em; font-size:1rem; min-width:250px; flex-wrap: wrap; align-content: flex-start; }
+.lotus-checkout .partexchange-vehicle .question .question-select .question-select-option { padding: 5px 20px 5px 5px; cursor: pointer; transition:background 0.5s;}
+.lotus-checkout .partexchange-vehicle .question.hasdescription .question-select .question-select-option:hover { background:#E3E3E3;}
+.lotus-checkout .partexchange-vehicle .question [type=radio] {width:20px; height: 20px; vertical-align: text-top; margin-right: 5px;}
+.lotus-checkout .partexchange-vehicle .question.currency input {position: relative; padding-left: 40px;}
+.lotus-checkout .partexchange-vehicle .question.currency {position:relative}
+.lotus-checkout .partexchange-vehicle .question.currency::after {content:"£"; position:absolute; bottom:2rem; left:10px; z-index: 2; display: inline-block; padding: 7px 5px;}
+.lotus-checkout .partexchange-vehicle .question ul {font-size:0.85em; list-style: none; margin: 0; padding: 0; font-weight:normal; text-transform:none; line-height:1.5em;}
+.lotus-checkout .partexchange-vehicle .question ul label {cursor: pointer;}
+.lotus-checkout .partexchange-vehicle.valuation h5 {margin-top:0;}
+.lotus-checkout .partexchange-vehicle.valuation table {margin-bottom:1em;}
+.lotus-checkout .partexchange-vehicle.valuation tr.equity {background: #FFF; font-weight: bold; transition: all 0.5s;}
+.lotus-checkout .partexchange-vehicle.valuation tr.equity.selected {background: #FFF200;}
+.lotus-checkout .partexchange-vehicle.valuation tr.equity td {padding:10px;}
+.lotus-checkout .control {margin-bottom:1em; background: #F3F3F3; padding: 1em; }
+.lotus-checkout .control .grid-x {justify-content: space-between;}
+.lotus-checkout .range {font-size:0.8em;}
+.lotus-checkout .range input {margin-bottom: 5px;}
+.lotus-checkout .value {font-size:0.9em; border-bottom:1px solid #e9e9e9; margin-bottom: 0.25em;}
+.lotus-checkout .value:first-child {border:none;}
+.lotus-checkout .actions {padding:0.75rem 2rem !important;  position: relative; border-top:1px solid #000; }
+.lotus-checkout .actions .buttons {justify-content: space-between;}
+.lotus-checkout .actions .buttons > * {flex-basis:auto;}
+.lotus-checkout .terms {background:#f3f3f3; padding:2em; font-size:0.9em;  }
+.lotus-checkout div.primary {background:#fff200; padding:2em; font-size:0.9em;  }
+.lotus-checkout table {font-size:0.9em; line-height:1.2em; margin: 0; width:auto; min-width:100%;}
+.lotus-checkout table tr.border {border-bottom:1px solid rgba(0,0,0,0.15);}
+.lotus-checkout table tr:nth-child(even) {background:rgba(0,0,0,0.05);}
+.lotus-checkout table td {vertical-align: top; padding:8px 10px; }
+.lotus-checkout table td .small {font-size:0.85em; padding: 10px 0 0; display: block; }
+.lotus-checkout table tr.detail td:nth-child(1) {padding-left: 1.5rem;}
+.lotus-checkout table tr.detail td:nth-child(2) {padding-right: 1.5rem;}
+.lotus-checkout .quote {margin-bottom:1em; background:#F3F3F3; padding:1.25em 1em 1em; }
+.lotus-checkout .quote .info {font-size:0.85em; padding: 10px 0 0; display: block; }
+.lotus-checkout .checkout {flex-grow:1;}
+.lotus-checkout .checkout iframe {width:100%; height:100%; border:none;}
+.lotus-checkout .cw-checkout, .lotus-checkout .cw-apply {width:100%;}
+.lotus-checkout #checkoutjourney.disabled .cw-checkout {pointer-events: none; background:#C1C0BF;   }
+.lotus-checkout .idd, .lotus-checkout .dan, .lotus-checkout .kyc {background:#F3F3F3; padding: 1.5rem 2rem 2rem; margin-bottom: 2rem;}
+.lotus-checkout .idd.read, .lotus-checkout .dan.read, .lotus-checkout .kyc.valid {background: #FFF200;}
+.lotus-checkout .idd h5, .lotus-checkout .dan h5 {margin-bottom: 0;}
+.lotus-checkout .dan ol ol {list-style:lower-latin;}
+
+.lotus-checkout  hr {margin: 1rem 0;}
+.lotus-modal .lotus-checkout ol.progression, .lotus-modal .lotus-checkout .actions {background: #f2f1f0;}
+
+.lotus-checkout .grid-x.grid-padding-y {padding-top: 1rem;  padding-bottom: 1rem;}
+.lotus-checkout label {display: flex; align-items: center; gap:0.5rem;}
+
+@media screen and (min-width: 64em) {
+    .lotus-checkout .quote h4 {margin-top:0;}
+    .lotus-checkout .quote-controls {display:flex; justify-content: space-between;}
+    .lotus-checkout .quote-controls > * {flex-basis:50%;}
+    .lotus-checkout .quote-controls .controls {margin-right:1em;}
+    .lotus-checkout .grid-x {display:flex; gap:0.5rem 2rem; flex-wrap:wrap;}
+     .lotus-checkout .grid-x .medium-12 {flex-basis:100%;}
+     .lotus-checkout .grid-x .medium-6 {flex-basis:40%; flex-grow: 1;}
+}
+@media screen and (max-width: 63.9375em) {
+    .lotus-checkout {width:100%;}
+}
+@media screen and (max-width: 39.9375em) {
+    .lotus-checkout .texture {padding: 0.5rem 0 0;}
+    .lotus-checkout .texture > h3 {padding: 0 1rem; font-size:1.4em;}
+    .lotus-checkout .actions {padding:0.5rem 1rem !important;  }
+    .lotus-checkout-calculator {padding: 1rem; }
+    .lotus-checkout ol.progression {padding: 0;}
+    .lotus-checkout ol.progression li {padding-top:16px; padding-bottom: 15px; font-size:0.875rem; }
+    .lotus-checkout .progression li span {display:none;}
+    .lotus-checkout .progression li.active span {display:inline;}
+    .lotus-checkout .pages {padding: 1rem; }
+    .lotus-checkout .partexchange-vehicle .question.hasdescription .question-select .question-select-option {width:auto;}
+    .lotus-checkout .products .product {flex-direction: column;}
+    .lotus-checkout .products .product video {width:100%; margin:0 0 1em; max-width: none; order:-1;}
+    .lotus-checkout .actions .buttons {gap:0; flex-wrap: nowrap;}
+    .lotus-checkout .actions .lotus-button {font-size:0.875rem; padding: 1em;}
+    .lotus-checkout .actions .lotus-button.secondary {padding-right: 1rem;}
+}
+@media screen and (max-height: 600px) {
+    .lotus-checkout .texture > h3 {padding: 0 1rem; font-size:1.4em;}
+    .lotus-checkout .texture {padding: 0.5rem 0 0;}
+    .lotus-checkout .actions {padding:0.5rem 1rem !important;  }
+}
+
+.reserve-wrapper .lotus-checkout {height:100dvh; z-index:100;}

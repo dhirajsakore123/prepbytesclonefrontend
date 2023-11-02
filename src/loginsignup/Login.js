@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../style/loginsignup.css'
 import illustrated from '../logos/illustrated.webp'
 import pblogo from '../logos/pblogo.webp'
@@ -18,11 +18,13 @@ const Login = () => {
      "email":email,
      "password":password
  }
-
+useEffect(()=>{
+   window.scrollTo(0,0)
+},[])
  const handelSubmit=(e)=>{
    e.preventDefault()
  
-   axios.post("http://localhost:4000/api/login",obj)
+   axios.post("https://prepbytesclone.onrender.com/api/login",obj)
    .then((res)=>{
      if(res.data.token){
        

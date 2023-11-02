@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import '../style/loginsignup.css'
 
@@ -30,11 +30,13 @@ const navigate=useNavigate()
      "passingyear":passingyear,
      "password":password
  }
-
+ useEffect(()=>{
+   window.scrollTo(0,0)
+},[])
  const handelSubmit=(e)=>{
   e.preventDefault()
 
-  axios.post("http://localhost:4000/api/register",obj)
+  axios.post("https://prepbytesclone.onrender.com/register",obj)
   .then((res)=>{
     if(res.data.token){
       
