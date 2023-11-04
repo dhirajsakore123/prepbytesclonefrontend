@@ -7,6 +7,7 @@ import SignUP from '../loginsignup/SignUp'
 import MockTest from '../components/MockTest'
 import VideoTutorials from '../components/VideoTutorials'
 import FullstackProgram from '../components/FullstackProgram'
+import ElevationAcademey from '../components/ElevationAcademey'
 const Routing = () => {
   return (
     <div>
@@ -18,6 +19,7 @@ const Routing = () => {
       <Route  path='/mock'   element={<MockTest/>}/>  
       <Route  path='/video'   element={<VideoTutorials/>}/>  
       <Route  path='/fullstack'   element={<FullstackProgram/>}/>  
+      <Route  path='/elevation'   element={<ElevationAcademey/>}/>  
     </Routes>
     </div>
   )

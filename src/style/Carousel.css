@@ -1,0 +1,41 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 1%;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: all 0.3s ease;
+    column-gap: 0.5%;
+  }
+  
+  .card {
+    flex: 0 0 33.33%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    height: 400px;
+    display: flex;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }

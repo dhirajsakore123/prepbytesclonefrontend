@@ -235,6 +235,7 @@ z-index: 10;
     cursor: pointer;
     align-items: center;
     column-gap: 0.5vw;
+    position: relative;
     
 }
 .nav3-false{
@@ -257,4 +258,51 @@ z-index: 10;
 .profile-name{
     color:#4b8ce8;  
     font-size: 1.1rem;
+}
+
+.dashboard-minu{
+    width: 200px ;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    border-top: 1px solid rgb(181, 181, 181);
+    right: 30px;
+    top: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.dashboard-minu div:nth-child(1){
+    width: 80%;
+    text-align: center;
+    border-bottom: 1px solid rgb(150, 150, 150);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 30%;
+}
+.dashboard-minu div:nth-child(2){
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    color: #ff8787;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    /* border: 2px solid red; */
+}
+
+
+@media only screen and (min-width:280px) and (max-width:500px){
+    .nav2{
+        display: none;
+    }
+    .nav3{
+        display: none;
+    }
+    .prep-logo{
+        width: 100%;
+        padding-left: 20%;
+    }
 }

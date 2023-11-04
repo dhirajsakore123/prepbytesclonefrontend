@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../style/home.css'
 import Main from '../logos/main.svg'
 
 const Home = () => {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+     },[])
   return (
     <div className='home-page'>
 
@@ -89,21 +92,21 @@ const Home = () => {
        <div className='iwantto-cards'>
         <p className='iwantto-heading'>I WANT TO</p>
         <div className='iwantto-card-cont'>
-           <div className='card'>
+           <div className='home-iwantto-card'>
             <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/prepare_for_campus.webp' alt='not found' className='iwantto-card-img'/>
             <p className='iwanttocard-text'>PREPARE FOR CAMPUS PLACEMENT</p>
             <div className='arrow-cont'>
               <img src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNi41NyIgdmlld0JveD0iMCAwIDE3IDE2LjU3Ij4NCiAgPGRlZnM+DQogICAgPHN0eWxlPg0KICAgICAgLmNscy0xIHsNCiAgICAgICAgZmlsbDogIzAwYTVlYzsNCiAgICAgIH0NCiAgICA8L3N0eWxlPg0KICA8L2RlZnM+DQogIDxwYXRoIGlkPSJmb3J3YXJkX2Fycm93IiBjbGFzcz0iY2xzLTEiIGQ9Ik03LjIyNSwxOC4xMDdsLjg0Mi44NDJhLjkwNy45MDcsMCwwLDAsMS4yODYsMGw3LjM3Ni03LjM3MmEuOTA3LjkwNywwLDAsMCwwLTEuMjg2TDkuMzUzLDIuOTE1YS45MDcuOTA3LDAsMCwwLTEuMjg2LDBsLS44NDIuODQyYS45MTIuOTEyLDAsMCwwLC4wMTUsMS4zbDQuNTcyLDQuMzU2SC45MDdBLjkwOC45MDgsMCwwLDAsMCwxMC4zMjV2MS4yMTRhLjkwOC45MDgsMCwwLDAsLjkxMS45MTFoMTAuOUw3LjI0LDE2LjgwNkEuOTA1LjkwNSwwLDAsMCw3LjIyNSwxOC4xMDdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwNCAtMi42NDcpIi8+DQo8L3N2Zz4NCg==' alt='not found' />
             </div>
            </div>
-            <div className='card'>
+            <div className='home-iwantto-card'>
             <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/master_competetive_pgm.webp' alt='not found' className='iwantto-card-img'/>
             <p className='iwanttocard-text1 '>MASTER COMPETITVE PROGRAMMING</p>
             <div className='arrow-cont'>
               <img src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNi41NyIgdmlld0JveD0iMCAwIDE3IDE2LjU3Ij4NCiAgPGRlZnM+DQogICAgPHN0eWxlPg0KICAgICAgLmNscy0xIHsNCiAgICAgICAgZmlsbDogIzAwYTVlYzsNCiAgICAgIH0NCiAgICA8L3N0eWxlPg0KICA8L2RlZnM+DQogIDxwYXRoIGlkPSJmb3J3YXJkX2Fycm93IiBjbGFzcz0iY2xzLTEiIGQ9Ik03LjIyNSwxOC4xMDdsLjg0Mi44NDJhLjkwNy45MDcsMCwwLDAsMS4yODYsMGw3LjM3Ni03LjM3MmEuOTA3LjkwNywwLDAsMCwwLTEuMjg2TDkuMzUzLDIuOTE1YS45MDcuOTA3LDAsMCwwLTEuMjg2LDBsLS44NDIuODQyYS45MTIuOTEyLDAsMCwwLC4wMTUsMS4zbDQuNTcyLDQuMzU2SC45MDdBLjkwOC45MDgsMCwwLDAsMCwxMC4zMjV2MS4yMTRhLjkwOC45MDgsMCwwLDAsLjkxMS45MTFoMTAuOUw3LjI0LDE2LjgwNkEuOTA1LjkwNSwwLDAsMCw3LjIyNSwxOC4xMDdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwNCAtMi42NDcpIi8+DQo8L3N2Zz4NCg==' alt='not found' />
             </div>
             </div>
-            <div className='card'>
+            <div className='home-iwantto-card'>
             <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/learn_full_stack.webp' alt='not found' className='iwantto-card-img'/>
             <p className='iwanttocard-text2 '>BUILD DEVELOPMENT PROJECTS</p>
             <div className='arrow-cont'>
