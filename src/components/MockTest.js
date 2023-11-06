@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import '../style/mock.css'
 import axios from 'axios'
+import Payment from '../routing/Payment'
 
 const MockTest = () => {
     const [data,setData]=useState('')
-   
+    //  const[id,setId]=useState('')
     useEffect(()=>{
       window.scrollTo(0,0)
           axios.get("https://prepbytesclone.onrender.com/api/mocktests")
           .then(res=>setData(res.data.mock))
           .catch(err=>console.log(err))
     },[])
+   
+
   return (
     <div className='mocktext'>
       <div className='mocktext-first'>
@@ -53,7 +56,7 @@ const MockTest = () => {
                     
                     </div>
 
-                    <button className='mocktest-card-btn'>Buy Now</button>
+                    <div className='mocktest-card-btn'><Payment Id={item._id}/></div>
                     </div>
                 )
             })

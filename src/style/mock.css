@@ -166,4 +166,8 @@ height: 0px;
         width: 50%;
         font-size: 1rem;
     }
+    .mocktext-forth{
+        flex-direction: column;
+        align-items: center;
+    }
 }

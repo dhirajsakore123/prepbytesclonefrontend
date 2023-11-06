@@ -203,6 +203,8 @@ const Home = () => {
               <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/Bespoke+Mentors.webp' alt='not found' className='sixth-cont-img'/>
       </div>
 
+     
+
     </div>
   )
 }

@@ -7,6 +7,7 @@ import Third from "../minielements/Third";
 import Forth from "../minielements/Forth";
 import Fifth from "../minielements/Fifth";
 import Carousel from "./Carousel";
+import Payment1 from "../routing/Payment1";
 
 const FullstackProgram = () => {
   const [toggle, setToggle] = useState(1);
@@ -86,7 +87,7 @@ const FullstackProgram = () => {
         <div className="fullstack-second-box1">SELECT BATCH</div>
 
         <label className="fullstack-second-box" htmlFor="first-batch">
-          <input type="radio" name="batch" id="first-batch" />
+          <input type="radio" name="batch" id="first-batch"  />
           <p className="fullstack-second-box-radio-text1">1st May</p>
           <p className="fullstack-second-box-radio-text2">Enrolment Started</p>
         </label>
@@ -99,7 +100,7 @@ const FullstackProgram = () => {
         <div className="fullstack-second-box2">
           <p className="fullstack-second-box2-price">₹ 30000</p>
           <div style={{ width: "100%", display: "flex", columnGap: "5px" }}>
-            <button className="fullstack-second-box2-btn1">Enroll Now</button>{" "}
+            <div className="fullstack-second-box2-btn1"><Payment1 amount={30000} name={"Full stack program"}/></div>{" "}
             <button className="fullstack-second-box2-btn2">Try for free</button>
           </div>
         </div>
