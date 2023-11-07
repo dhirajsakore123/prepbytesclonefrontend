@@ -29,7 +29,7 @@ console.log(initial)
       .then(res=>setuser(res.data))
      .catch(err=>console.log(err))
     }
-},[loggedIn,user])
+},[loggedIn,user.name])
 
     const [study,setStudy]=useState(false)
     const [course,setCourse]=useState(false)

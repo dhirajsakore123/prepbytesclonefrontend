@@ -99,4 +99,7 @@
     .inner-footer2{
         font-size: 0.5rem;
     }
+    .follow-us{
+        row-gap: 0px;
+    }
 }

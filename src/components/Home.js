@@ -1,11 +1,19 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../style/home.css'
 import Main from '../logos/main.svg'
+import axios from 'axios';
 
 const Home = () => {
+  const[data,setData]=useState('')
+  console.log(data);
   useEffect(()=>{
+    
     window.scrollTo(0,0)
-     },[])
+    axios.get("http://localhost:4000/api/mentordata")
+    .then((res)=>setData(res.data.user))
+    .catch((err)=>console.log(err))
+  }, []);
+  
   return (
     <div className='home-page'>
 
@@ -203,7 +211,60 @@ const Home = () => {
               <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/Bespoke+Mentors.webp' alt='not found' className='sixth-cont-img'/>
       </div>
 
-     
+     <div>
+      <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/you_could_be_the(web_1366).png' alt='not found' width={'100%'}/>
+     </div>
+     <div className='home-mentor-heading'>
+        <p>PrepBytes Mentors</p>
+        <p>PrepBytes students get mentored by industry experts who have achieved in their careers and are passionate about helping students achieve their dream.</p>
+     </div>
+
+     <div className='home-mentor-data'>
+           {
+            data && data.map((item,index)=>{
+              return(
+                <div className='home-mentor-data-card' key={index}>
+                      <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/mamta_mentor_background.png' alt='not found' className='home-mentor-data-card-img'/>
+                      <img src={item.profile} alt='not found' className='home-mentor-data-card-profile'/>
+                      <p className='home-mentor-data-card-name'>{item.name}</p>
+                      <p className='home-mentor-data-card-name1'>{item.company}</p>
+                      <div className='home-mentor-data-card-description'>{item.description}</div>
+                      <img src={item.companyimg} alt='not found' className='home-mentor-data-card-com-img'/>
+                </div>
+              )
+            })
+           }
+     </div>
+
+     <div className='home-collage-boy-img'>
+      <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/campus-business-manager/banner/CBM-WEB.webp' alt='not found' className='home-collage-boy-img-img'/>
+       <div className='home-collage-boy-img-innerbox'>
+       <p>Want to represent your college?</p>
+       <p>Join PrepBytes Campus Business Manager Internship program.</p>
+       <button>Join Now</button>
+        </div>
+     </div>
+
+     <div className='home-last-three-cards'>
+      <h1>Most Popular Blogs</h1>
+      <div className='home-last-three-cards-cont'>
+          <div className='home-last-three-cards-cont-card'>
+                <img src='https://blog-images-upload.s3.ap-south-1.amazonaws.com/blog_top_50_interview_questions_answers.png' alt='not found'/>
+                <p>Top 50 C Programming Interview Questions and Answers</p>
+                <button>Read Now</button>
+          </div>
+          <div className='home-last-three-cards-cont-card'>
+                <img src='https://s3.ap-south-1.amazonaws.com/blog-images-upload/blog_vinit_story.png' alt='not found'/>
+                <p>Top 50 C Programming Interview Questions and Motivational Story : He got his first placement success after being rejected by 22 companies</p>
+                <button>Read Now</button>
+          </div>
+          <div className='home-last-three-cards-cont-card'>
+                <img src='https://blog-images-upload.s3.ap-south-1.amazonaws.com/blog_top_50_interview_questions_answers.png' alt='not found'/>
+                <p>Lyrics from the famous track aptly describes the situation of every fresher when it comes to facing the interview</p>
+                <button>Read Now</button>
+          </div>
+      </div>
+     </div>
 
     </div>
   )

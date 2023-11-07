@@ -4,6 +4,9 @@
 }
 .home-page{
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .know-more{
     display: flex; 
@@ -50,6 +53,7 @@ width:90%;
     border: 0px;
 }
 .tech-box{
+    width: 100%;
     padding-top: 5vh;
     padding-bottom: 5vh;
     display: flex;
@@ -64,7 +68,7 @@ width:90%;
     position: fixed;
     z-index: 20;
     bottom: 0px;
-    width:100vw;
+    width:100%;
     height: 30px;
     background-color: #00a5ec;
     color: #fff;
@@ -207,6 +211,7 @@ left: -2vw;
   display: flex;
   flex-direction: column;
  align-items: center;
+ width: 100%;
 }
 .iwantto-heading{
     text-align: center;
@@ -482,6 +487,7 @@ left: -2vw;
 
 .sixth-compo{
     background-color: #bcf2fb;
+    width: 100%;
     height: 150vh;
     display: flex;
     align-items: center;
@@ -492,6 +498,193 @@ left: -2vw;
     position: absolute;
     bottom: 0px;
 }
+
+.home-mentor-data{
+    width: 70%;
+    /* border: 2px solid red; */
+    min-height: 50vh;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content:nter ce; */
+    justify-content: space-between;
+    /* column-gap: 10%; */
+    row-gap: 10vh;
+}
+.home-mentor-data-card{
+    width: 300px;
+    height:470px ;
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 3px 36px rgba(0,0,0,.1607843137254902);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  
+}
+.home-mentor-data-card-img{
+    position: absolute;
+    top:0px;
+    width: 100%;
+}
+.home-mentor-data-card-profile{
+    position: absolute;
+    width: 40%; 
+    border-radius: 50%;
+    top: 7%;
+    left: 20px;
+}
+.home-mentor-data-card-name{
+    position: absolute;
+    top: 35%;
+   width: 90%;
+   font-size: 1.1rem;
+   font-weight: 600;
+   color: #303131;
+
+}
+.home-mentor-data-card-name1{
+    position: absolute;
+    top: 40%;
+   width: 90%;
+   font-size: 0.9rem;
+   /* font-weight: 600; */
+   color: #303131;
+
+}
+.home-mentor-data-card-description{
+    position: absolute;
+    top: 50%;
+    height: 30%;
+   width: 90%;
+   padding:5% 0px;
+   color: #3e4041;
+   letter-spacing: 1.4px;
+   overflow-y: scroll;
+   border-top:1px solid rgba(128, 128, 128, 0.233) ;
+   border-bottom:1px solid rgba(128, 128, 128, 0.203) ;
+}
+.home-mentor-data-card-com-img{
+    position: absolute;
+    bottom: 15px;
+}
+
+.home-mentor-heading{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home-mentor-heading p:nth-child(1){
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 5% 0px 2% 0px;
+    color: #3e4041;
+}
+.home-mentor-heading p:nth-child(2){
+    font-size: 1.1rem;
+    color: #818181;
+    width: 50%;
+    text-align: center;
+
+}
+.home-collage-boy-img{
+    width: 80%;
+     min-height:40vh ;
+     position: relative;
+     box-shadow: 0 0 20px rgba(0,0,0,.1607843137254902);
+     border-radius: 10px;
+}
+.home-collage-boy-img-innerbox{
+   position: absolute;
+   top: 10%;
+   left: 5%;
+   /* border: 2px solid red; */
+   display: flex;
+   flex-direction: column;
+   row-gap: 30px;
+   align-items: left;
+   width: 40%;
+}
+.home-collage-boy-img-img{
+    width: 100%;
+}
+.home-collage-boy-img-innerbox p:nth-child(1){
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3e4041;
+}
+.home-collage-boy-img-innerbox p:nth-child(2){
+    font-size: 1.5rem;
+    color: #00a5ec;
+}
+.home-collage-boy-img-innerbox button:nth-child(3){
+    background-image:  linear-gradient(104deg,#f1127c,#f86667);
+    color: white;
+    border: none;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.home-last-three-cards{
+    background-color: #fdf0d7;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home-last-three-cards h1{
+    color: #454646;
+}
+ .home-last-three-cards-cont{
+    /* border: 2px solid red; */
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 0px;
+ }
+ .home-last-three-cards-cont-card{
+    width: 32%;
+    height: 480px;
+    /* border: 2px solid blue; */
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 3px 30px rgba(0,0,0,.1607843137254902);
+ }
+ .home-last-three-cards-cont-card img{
+    width: 100%;
+ }
+ .home-last-three-cards-cont-card p{
+    margin-top: 20px;
+    width: 90%;
+    font-size: 1.1rem;
+    color: #323333;
+ }
+ .home-last-three-cards-cont-card button{
+    position: absolute;
+    bottom: 10px;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #00a5ec;
+    background-color: transparent;
+ }
+
+
+
+
+
+
 
 
 
@@ -518,7 +711,7 @@ left: -2vw;
     }
     .tech-box{
         flex-wrap: wrap;
-        justify-content: left;
+        justify-content: space-around;
         /* gap: 1%; */
     }
     .mentorship-driven{
@@ -673,6 +866,39 @@ left: -2vw;
         .sixth-cont-img{
             display: none;
         }
+        .home-mentor-heading p:nth-child(1){
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .home-mentor-heading p:nth-child(2){
+            width: 90%;
+            font-size: 1rem;
+        }
+        .home-collage-boy-img-innerbox p:nth-child(1){
+            font-size: 1rem;
+        }
+        .home-collage-boy-img-innerbox p:nth-child(2){
+            font-size: 0.9rem;
+        }
+        .home-collage-boy-img-img{
+            position: absolute;
+            bottom: 0px;
+        }
+        .home-collage-boy-img-innerbox{
+            width: 100%;
+            row-gap: 30px;
+        }
+        .home-last-three-cards-cont{
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        .home-last-three-cards-cont-card{
+            width: 100%;
+        }
+
+
+
 }
 
 @media only screen and (min-width:280px) and (max-width:500px){
