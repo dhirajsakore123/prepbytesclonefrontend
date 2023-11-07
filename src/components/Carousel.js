@@ -1,7 +1,16 @@
-import React, { useState } from 'react';
-import '../style/Carousel.css';
 
-const Carousel = () => {
+
+
+
+
+import React from 'react'
+// import styled from 'styled-components'
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import '../style/Carousel.css'
+
+const Carousel1 = () => {
+
   const data=[  {
     id:1,
      type:"student",
@@ -92,55 +101,54 @@ const Carousel = () => {
       company:"Sap Labs"
      
   }]
-  const [currentIndex, setCurrentIndex] = useState(0);
-  console.log(currentIndex)
-  console.log(data.length)
-  const nextSlide = () => {
-    if(7<=currentIndex)
-    {
-      setCurrentIndex(0)
-    }
-    else{
-      setCurrentIndex((prevIndex) => (prevIndex + 1));
-
-    }
-  };
-
-  const prevSlide = () => {
- 
-   if(currentIndex===0){
-      setCurrentIndex(7)
-   }
-   else{
-    setCurrentIndex((prevIndex) => (prevIndex - 1 ));
-
-   }
-   
+  const responsive = {
     
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 3
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
   };
-
   return (
-    <div className="carousel-container">
-      <div className="carousel-track" style={{ transform: `translateX(-${currentIndex * 33.83}%)` }}>
-        {data.map((item, index) => (
-          <div key={index} className="card">
-            <div className='card-inner'>
-            <img src={item.profile} alt='not found'/> 
-           <p> {item.name}</p>
-           <p>{item.company}</p>
-            </div>
-           
-          </div>
-        ))}
-      </div>
-      <button className="arrow left-arrow" onClick={prevSlide}>
-        &lt;
-      </button>
-      <button className="arrow right-arrow" onClick={nextSlide}>
-        &gt;
-      </button>
-    </div>
-  );
-};
+  
+        <div  className='carsoul-container'>
+       
+        <Carousel responsive={responsive} infinite={true}>
+               {
+                data && data.map((item,index)=>{
+                    return(
+                        <div className='student'  key={index}>
+                    <div className='studen-inner1'>
+                        <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/Quote1.webp' alt='comma'/>
+                        <h2>{item.name}</h2>
+                    </div>
+                    <p>{item.description}</p>
+                    <img className='caursole-img1' src={item.profile} alt='shivani'/>
+                    <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/Quote2.webp' alt='coma2' className='caursole-img2'/>
+                </div>
+                    )
+                })
+               }
 
-export default Carousel;
+                
+</Carousel>
+        </div>
+   
+  )
+}
+
+  
+  
+export default Carousel1

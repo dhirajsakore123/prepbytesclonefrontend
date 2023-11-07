@@ -19,13 +19,13 @@ const ElevationAcademey = () => {
   const [toggle, setToggle] = useState(1);
   const [data, setData] = useState();
   
-  console.log(data)
+ 
 
   useEffect(() => {
     window.scrollTo(0, 0);
 
     axios.get("http://localhost:4000/api/mentordata")
-    .then((res)=>setData(res.data))
+    .then((res)=>setData(res.data.user))
     .catch((err)=>console.log(err))
   }, []);
 
@@ -64,7 +64,33 @@ const ElevationAcademey = () => {
           <p>For 2023, 2022 & 2021 graduates</p>
           <p>Batch Starting: 1st May 2023</p>
         </div>
-        <div className="elevation-second-cont2"></div>
+        <div className="elevation-second-cont2">
+       
+            <div className='right-element '>
+              <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/free_class.webp' alt='first'/>
+              <div className='right-element-inner'>
+                <h2>Free Webinar</h2>
+                <p>17th April</p>
+              </div>
+            {/* <div className='line'></div> */}
+            </div>
+            <div className='right-element '>
+              <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/Start+Assesment.webp' alt='second'/>
+              <div className='right-element-inner'>
+                <h2>1:1 Counselling session</h2>
+                <p>From 18th April</p>
+              </div>
+              {/* <div className='line2'></div> */}
+            </div>
+            <div className='right-element'>
+              <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/Batch+Starts.webp' alt='third'/>
+              <div className='right-element-inner'>
+                <h2>Batch Start</h2>
+                <p>01 May'23, Mon-Fri (7-10PM)</p>
+              </div>
+            </div>
+           
+        </div>
       </div>
 
       <div className="elevation-third">
@@ -878,6 +904,22 @@ const ElevationAcademey = () => {
            </div>
       </div>
 
+      <div className='home-mentor-data'>
+           {
+            data && data.map((item,index)=>{
+              return(
+                <div className='home-mentor-data-card' key={index}>
+                      <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/mamta_mentor_background.png' alt='not found' className='home-mentor-data-card-img'/>
+                      <img src={item.profile} alt='not found' className='home-mentor-data-card-profile'/>
+                      <p className='home-mentor-data-card-name'>{item.name}</p>
+                      <p className='home-mentor-data-card-name1'>{item.company}</p>
+                      <div className='home-mentor-data-card-description'>{item.description}</div>
+                      <img src={item.companyimg} alt='not found' className='home-mentor-data-card-com-img'/>
+                </div>
+              )
+            })
+           }
+     </div>
        {/* <div className="elevation-ninth">
             <div className="elevation-ninth-cont1">
 

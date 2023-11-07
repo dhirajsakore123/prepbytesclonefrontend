@@ -1,20 +1,13 @@
 import React, { useState } from 'react'
 import '../style/master.css'
 import Payment1 from '../routing/Payment1'
+import Carousel1 from './Carousel'
 
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 const MasterCom = () => {
 
-   const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1
-    };
+  
    const[toggle,setToggle]=useState(1)
    const data=[  {
       id:1,
@@ -106,6 +99,16 @@ const MasterCom = () => {
         company:"Sap Labs"
        
     }]
+    const [togle, setTogle] =useState(false)
+    const [togle2, setTogle2] =useState(false)
+    const clickHandler1 =()=>{
+        setTogle(false);
+        setTogle2(true);
+    }
+    const clickHandler2 =()=>{
+        setTogle(false);
+        setTogle2(false);
+    }
   
   return (
     <div className='master'>
@@ -287,6 +290,130 @@ const MasterCom = () => {
         <div className='master-six'>
            <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/MCP-company-new.webp' alt='not found'/>
         </div>
+        <h1 >Curriculum</h1>
+       <div className='master-cariculum'>
+          <div className='master-cariculum-left' >
+         {/* <div> */}
+        <div onClick={()=>setTogle(true)} className="master-cariculum-left-card">
+            <img className="logo" src="https://prepbytes-uat-images.s3.ap-south-1.amazonaws.com/13.webp" alt="c/c++/java"/>
+            <div className={togle ?`leftTitle`:""}>Language Fundamentals (Choose any one of C/C++/Java/Python)</div>
+        </div>
+        <div onClick={clickHandler1} className="master-cariculum-left-card">
+            <img className="logo" src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/Icon2.webp" alt="DSA"/>
+            <div className={!togle &&togle2?`leftTitle`:""}>Data Structures and Algorithms</div>
+        </div>
+        <div onClick={clickHandler2} className="master-cariculum-left-card">
+            <img className="logo" src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/Icon3.webp" alt="competitivemath"/>
+            <div className={!togle && !togle2?`leftTitle`:""}>Competitive Maths</div>
+        </div>
+
+        <img className="leftImg" src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/Curriculum-Image.webp" alt="lftimg"/>
+          </div>
+          <div className="master-cariculum-right">
+
+            {togle
+            ?<ul className='master-cariculumlist' >
+            <li>C/C++/Java/Python Overview</li>
+            <li className="empty"></li>
+            <li>Logic Building</li>
+            <li className="empty"></li>
+            <li>Data Types</li>
+            <li className="empty"></li>
+            <li>Pattern Programming</li>
+            <li className="empty"></li>
+            <li>Operators and Expressions</li>
+            <li className="empty"></li>
+            <li>Input/Output</li>
+            <li className="empty"></li>
+            <li>Functions</li>
+            <li className="empty"></li>
+            <li>Functions and OOPs(Python)</li>
+            <li className="empty"></li>
+            <li>Pointers(C/C++)</li>
+            <li className="empty"></li>
+            <li>Arrays</li>
+            <li className="empty"></li>
+            <li>Structures</li>
+            <li className="empty"></li>
+            <li>Character Arrays and Strings</li>
+            <li className="empty"></li>
+            <li>Recursion</li>
+            <li className="empty"></li>
+            <li>Bit Manipulation</li>
+            <li className="empty"></li>
+            <li>STLs(C++)</li>
+            <li className="empty"></li>
+            <li>Collections (Java)</li>
+            <li className="empty"></li>
+            <li>Set, List, Tuples, Dictionary(Python)</li>
+            
+        </ul>
+            :!togle &&togle2
+            ?<ul className='master-cariculumlist'>
+            <li>Linked List</li>
+            <li className="empty"></li>
+            <li>Stack</li>
+            <li className="empty"></li>
+            <li>Queues</li>
+            <li className="empty"></li>
+            <li>Trees</li>
+            <li className="empty"></li>
+            <li>Heaps</li>
+            <li className="empty"></li>
+            <li>Graphs</li>
+            <li className="empty"></li>
+            <li>Segment Tree</li>
+            <li className="empty"></li>
+            <li>Searching</li>
+            <li className="empty"></li>
+            <li>Sorting</li>
+            <li className="empty"></li>
+            <li>Hashing</li>
+            <li className="empty"></li>
+            <li>Intro to DS/Algo</li>
+            <li className="empty"></li>
+            <li>Time Complexity</li>
+            <li className="empty"></li>
+            <li>Back Tracking</li>
+            <li className="empty"></li>
+            <li>Divide & Conquer</li>
+            <li className="empty"></li>
+            <li>Greedy Algorithms</li>
+            <li className="empty"></li>
+            <li>Dynamic Programming</li>
+            <li className="empty"></li>
+            <li>String Matching Algorithms</li>
+            
+        </ul >
+            :<ul className='master-cariculumlist' style={{listStyle:"disc"}}>
+            <li>Prime Numbers</li>
+            <li className="empty"></li>
+            <li>Permutation & Combinations</li>
+            <li className="empty"></li>
+            <li>GCD</li>
+            <li className="empty"></li>
+            <li>LCM</li>
+            <li className="empty"></li>
+            <li>Probabilities</li>
+            <li className="empty"></li>
+            <li>Number Theory</li>
+            <li className="empty"></li>
+            <li>Modular Arithmetic</li>
+            <li className="empty"></li>
+            <li>Binary Exponention</li>
+            <li className="empty"></li>
+            <li>Matrix Exponentiation</li>
+            <li className="empty"></li>
+            <li>Game Theory</li>
+            <li className="empty"></li>
+            <li>Computational Geometry</li>
+            
+            
+        </ul>}
+
+            
+           </div>
+        </div>
 
         <div className='sixth-enroll'>
           <p>SELECT BATCH</p>
@@ -307,27 +434,8 @@ const MasterCom = () => {
        </div>
 
        <div className='master-coursole' >
-       <Slider {...settings}>
-      <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
-    </Slider>
-    
+       
+      <Carousel1/>
        </div>
 
 

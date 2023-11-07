@@ -6,7 +6,7 @@ import Second from "../minielements/Second";
 import Third from "../minielements/Third";
 import Forth from "../minielements/Forth";
 import Fifth from "../minielements/Fifth";
-import Carousel from "./Carousel";
+
 import Payment1 from "../routing/Payment1";
 
 const FullstackProgram = () => {
@@ -1222,13 +1222,7 @@ const FullstackProgram = () => {
             </div>
           </div>
       </div>
-      <div className="fillstak-carsoul">
-        <div className="fillstak-carsoul-cont1">
-         <p>Testimonials</p> 
-         <p>Our Students Speaks</p> 
-          </div>
-        <Carousel/>
-      </div>
+    
 
      <div className="fullstack-big-img">
         <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/digital-marketing/Feature.webp" alt="not found" className="fullstack-big-img-real"/>

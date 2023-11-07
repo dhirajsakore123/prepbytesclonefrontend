@@ -13,7 +13,7 @@
     /* border: 2px solid red; */
 
     background-color: rgb(253, 240, 215);
-    height: 90vh;
+    min-height: 90vh;
     width: 85%;
     display: flex;
     align-items: center;
@@ -87,7 +87,7 @@ color: #00a5ec;
 .elevation-second{
     background-color: #e5f4fb;
     width: 85%;
-    height: 18vh;
+    min-height: 18vh;
     display: flex;
 }
 .elevation-second-cont1{
@@ -796,7 +796,7 @@ align-items: center;
 .elevation-ninth-cont1{
     /* border: 2px solid rgb(0, 47, 255); */
     width: 83%;
-    height: 80%;
+    min-height: 80%;
 
 }
 .elevation-ninth-cont1-inner1{
@@ -887,6 +887,24 @@ width: 25%;
     width: 100%;
 }
 
+.elevation-second-cont2{
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+}
+.right-element-inner{
+    display: flex;
+    flex-direction: column;
+}
+.right-element-inner h2{
+    font-size: 1rem;
+    /* width: 30px; */
+}
+.right-element-inner p{
+    border: 2px dotted  #00a5ec;
+    border-radius: 5px;
+    background-color: #d5edf8;
+}
 
 
 /* .elevation-ninth-cont2{
@@ -895,4 +913,163 @@ width: 25%;
     height: 80%;
 } */
 
+@media only screen and (min-width:280px) and (max-width:500px){
+    
+    .elevation-first{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .elevation-first-img{
+        width: 100%;
+        /* margin-top: 20px; */
+    }
+    .elevation-first-cont{
+        width: 90%;
+        row-gap: 5vh;
+    }
+    .elevation-first-cont-heading{
+        font-size: 1.5rem;
+    }
+    .elevation-first-cont-btns{
+        flex-direction: column;
+        row-gap: 3vh;
+    }
+    .elevation-second{
+        width: 100%;
+        flex-direction: column;
+    }
+    .elevation-second-cont1{
+        width: 100%;
+    }
+    .elevation-second-cont2{
+        width: 100%;
+        box-sizing: border-box;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+
+        /* align-items: left; */
+        /* justify-content: left; */
+        row-gap: 5vh;
+        align-items: flex-start;
+        padding: 5% 5%;
+    }
+    .right-element{
+      /* border: 2px solid red; */
+      display: flex;
+      column-gap: 20px;
+    }
+    .elevation-third{
+        width: 100%;
+        align-items: center;
+    }
+    .elevation-third-inner{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .elevation-third-inner1{
+        text-align: center;
+    }
+    
+    .elevation-third-inner-cont1{
+        width: 80%;
+    }
+    .elevation-third-inner-cont3{
+        width: 90%;
+        font-size: 0.9rem;
+    }
+    .elevation-third-inner-cont2{
+        height: 30px;
+        width: 1px;
+        background-color: #00a5ec;
+    }
+    .elevation-fifth{
+
+     width: 95%;
+    
+       
+    }
+    .elevation-fifth-inner1 p:nth-child(2){
+        width: 90%;
+    }
+    .elevation-fifth-inner-cont3-text{
+        font-size: 1rem;
+        width: 50%
+    }
+    .elevation-fifth-inner-cont4-inner2 p{
+        /* width: 0.8rem; */
+        font-size: 0.9rem;
+    }
+    .elevation-sixth-cont1{
+        width: 100%;
+    }
+    .elevation-sixth-cont1 p:nth-child(1){
+        text-align: center;
+    }
+
+    .elevation-sixth-cont1 p:nth-child(2){
+        width: 100%;
+        text-align: center;
+    }
+    .elevation-seventh-cont1 p:nth-child(1){
+     font-size: 1.5rem;
+    }
+.elevation-seventh-cont1 p:nth-child(2){
+    font-size:0.8rem;
+
+}
+.elevation-seventh-cont2{
+    width: 95%;
+    font-size: 0.5rem;
+}
+.elevation-seventh-cont2-inner1{
+    width: 50%;
+}
+.elevation-seventh-cont2-inner2{
+    width: 50%;
+}
+.E-minicompo p:nth-child(1){
+    font-size: 1.5rem;
+}
+.E-minicompo div{
+    font-size: 0.7rem;
+}
+.elevation-eight-cont2{
+    width: 90%;
+}
+.elevation-eight-btn{
+    width: 50%;
+}
+.elevation-ninth-cont1-inner1{
+  flex-direction: column-reverse;
+}
+.elevation-ninth-cont1-inner1-cont1{
+    width: 100%;
+}
+.elevation-ninth-cont1-inner1 img{
+    /* margin-top: 30px; */
+    width: 50%;
+    /* height: 50%; */
+}
+.elevation-ninth-cont1-inner1-cont1 p:nth-child(1){
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.elevation-ninth-cont1-inner1-cont1 p:nth-child(2){
+    width: 100%;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.elevation-ninth-cont1-inner2-box-inner2 p:nth-child(1){
+    font-size: 1.5rem;
+}
+.elevation-ninth-cont1-inner2-box-inner2 p:nth-child(2){
+    font-size: 0.7rem;
+}
+
+.elevation-ninth-cont1{
+    width: 100%;
+}
+}
 

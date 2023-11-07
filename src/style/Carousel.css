@@ -1,41 +1,30 @@
-.carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 1%;
-  }
-  
-  .carousel-track {
-    display: flex;
-    transition: all 0.3s ease;
-    column-gap: 0.5%;
-  }
-  
-  .card {
-    flex: 0 0 33.33%;
-    box-sizing: border-box;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #ccc;
-    height: 400px;
-    display: flex;
-  }
-  
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px 15px;
-    cursor: pointer;
-  }
-  
-  .left-arrow {
-    left: 10px;
-  }
-  
-  .right-arrow {
-    right: 10px;
-  }
+.student{
+  width:100%;
+  height: 300px;
+  position: relative;
+  /* border: 2px solid red; */
+}
+.studen-inner1{
+  display: flex;
+  color: black;
+  /* width: 80%; */
+  font-size: 0.9rem;
+}
+.student p:nth-child(2){
+  position: absolute;
+  left: 10px;
+  width: 70%;
+  /* border: 2px solid red; */
+
+  font-size: 0.8rem;
+}
+.caursole-img1{
+  position: absolute;
+  bottom:20%;
+  width: 50px;
+  left:30%;
+}
+.caursole-img2{
+  position: absolute;
+  bottom: 0%;
+}

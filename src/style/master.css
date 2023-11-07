@@ -391,19 +391,12 @@ box-shadow: 0px 1px 6px rgba(125, 124, 124, 0.161);
   border-radius: 5px;
 }
 .master-coursole{
-  border: 2px solid red;
-  width: 80%;
-  height:40vh;
+  /* border: 2px solid red; */
+  padding: 5% 0px;
+  width: 70%;
+  min-height:40vh;
 }
-.master-coursole-conte1{
-  width: 100%;
-  height: 100%;
-}
-.master-coursole-box{
-  border: 2px solid red;
- width: 40%;
 
-}
 
 
 
@@ -436,3 +429,198 @@ box-shadow: 0px 1px 6px rgba(125, 124, 124, 0.161);
   .side-enroll img{
     height:90%;
   }
+  .master-cariculum{
+    padding: 5% 0px;
+    width: 70%;
+    display: flex;
+    column-gap: 5%;
+    /* border: 2px solid red; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+  }
+  .master-cariculum-left{
+    /* border: 2px solid red; */
+      width: 50%;
+  }
+
+  .master-cariculum-right{
+    /* border: 2px solid red; */
+    width: 50%;
+    height: 60vh;
+    overflow-y: scroll;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(133,133,133,.1607843137);
+
+
+  }
+  .master-cariculum-right::-webkit-scrollbar{
+    width: 5px;
+    background-color: #00a6eb;
+  }
+  .master-cariculum-right::-webkit-scrollbar-track{
+    color: #00a6eb;
+    background-color: rgb(189, 188, 188);
+  }
+  .master-cariculum-right::-webkit-scrollbar-thumb {
+    background-color: #00a6eb; /* Color of the thumb */
+  }
+  .master-cariculum-left{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5%;
+  }
+  .master-cariculum-left img:nth-child(4){
+  height: 50%;
+  }
+
+.master-cariculum-left-card{
+  /* border: 2px solid red; */
+  width:100% ;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 3px 8px rgba(133,133,133,.1607843137);
+}
+.master-cariculum-left-card img{
+  height: 90%;
+}
+
+.master-cariculumlist{
+   /* padding-left: 10%;  */
+   /* position: relative; */
+   margin-left: 30px;
+   display: flex;
+   flex-direction: column;
+  row-gap:20px;
+}
+.empty{
+  display: none;
+}
+.master-cariculum-left-card div{
+  border-left: 1px solid grey;
+  height: 90%;
+  margin-left: 10px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+@media only screen and (min-width:280px) and (max-width:500px){
+  .master-first{
+    width: 100%;
+    flex-direction: column-reverse;
+    padding: 5% 0px; 
+  }
+  .master-first img{
+    width: 100%;
+  }
+  .master-first-cont1{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    row-gap: 3vh;
+  }
+  .master-second{
+    width: 100%;
+  }
+  .master-second-box1{
+    width: 80%;
+  }
+  .master-third{
+    width:90%;
+  }
+  .master-third p:nth-child(1){
+    text-align: center;
+  }
+  .master-third p:nth-child(2){
+    font-size: 1rem;
+  }
+  .master-third-cont{
+    width: 100%;
+    flex-direction: column;
+  }
+  .master-third-cont-inner{
+    width: 100%;
+  }
+  .master-threeandhalf{
+   font-size: 1.2rem;   
+   text-align: center; 
+  }
+  .master-forth-con2-inner2{
+    display: none;
+    
+  }
+  .master-forth{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    /* border: 2px solid red; */
+  }
+  .master-forth-con2-inner1{
+    width: 80%;
+    /* border: 2px solid red; */
+    row-gap: 20px;
+
+  }
+  .master-forth-con2-inner1-row1-cont1{
+    width: 100%;
+  }
+  .master-forth-con2-inner1-row1-cont2{
+    left:-20px;
+  }
+  .master-forth-con2-inner3{
+    width: 80%;
+    /* border: 2px solid red; */
+    row-gap: 20px;
+
+  }
+  .master-forth-con2-inner1-row1-cont1 p:nth-child(1){
+    text-align: left;
+    padding-left: 50px;
+  }
+  .master-forth-con2-inner1-row1-cont1 p:nth-child(2){
+    text-align: left;
+    padding-left: 50px;
+
+
+  }
+  .sixth-enroll{
+    flex-direction: column;
+  }
+  .sixth-enroll-date-box{
+    width: 80%;
+  }
+  .master-five-inner p:nth-child(1){
+    font-size: 1.5rem;
+  }
+  .master-five-inner p:nth-child(2){
+    font-size: 1rem;
+  }
+  .master-five{
+    width: 100%;
+  }
+  .master-six-heading{
+    text-align: center;
+  }
+  .master-six{
+    width: 100%;
+  }
+  .master-cariculum{
+    width: 100%;
+    flex-direction: column;
+  }
+  .master-cariculum-left{
+    width: 100%;
+  }
+  .master-cariculum-right{
+    width: 100%;
+  }
+  .student p:nth-child(2){
+    font-size: 0.5rem;
+  }
+}
