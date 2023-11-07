@@ -24,7 +24,7 @@ const ElevationAcademey = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    axios.get("http://localhost:4000/api/mentordata")
+    axios.get("https://prepbytesclone.onrender.com/api/mentordata")
     .then((res)=>setData(res.data.user))
     .catch((err)=>console.log(err))
   }, []);

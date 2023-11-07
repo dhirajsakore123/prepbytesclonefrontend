@@ -25,7 +25,7 @@ console.log(initial)
       const jsonString = `${token1}`;
       const obj = JSON.parse(jsonString);
       const userId = obj._id;
-      axios.post("http://localhost:4000/api/dashboard",{userId:userId})
+      axios.post("https://prepbytesclone.onrender.com/api/dashboard",{userId:userId})
       .then(res=>setuser(res.data))
      .catch(err=>console.log(err))
     }

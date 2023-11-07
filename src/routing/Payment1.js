@@ -31,7 +31,7 @@ const Payment1 = (props) => {
                   const userId = obj._id;
 
                  if(props.name==="Full stack program"){
-                  axios.post("http://localhost:4000/api/fullstack",{
+                  axios.post("https://prepbytesclone.onrender.com/api/fullstack",{
                       name:props.name,
                       userId:userId
                   })
@@ -39,7 +39,7 @@ const Payment1 = (props) => {
                   .catch(err=>console.log(err))
                  }
                  if(props.name==="MASTER COMPETITIVE PROGRAMMING"){
-                  axios.post("http://localhost:4000/api/master",{
+                  axios.post("https://prepbytesclone.onrender.com/api/master",{
                       name:props.name,
                       userId:userId
                   })
