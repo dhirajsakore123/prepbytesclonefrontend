@@ -36,7 +36,7 @@ const navigate=useNavigate()
  const handelSubmit=(e)=>{
   e.preventDefault()
 
-  axios.post("https://prepbytesclone.onrender.com/register",obj)
+  axios.post("https://prepbytesclone.onrender.com/api/register",obj)
   .then((res)=>{
     if(res.data.token){
       
