@@ -150,12 +150,14 @@ const Home = () => {
                     <button className='knowmore-btn2'>Know more</button>
                  </div>
            </div>
+           <div className='forth-compo-inner2-box'>
            <div className='forth-compo-inner2'>
               <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/for_2020(1st+Image).svg' alt='not found' style={{width:'120%'}}/>
            </div>
            <div className='forth-compo-inner2'>
             <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/tools_for_2020.svg' alt='not found' style={{width:'120%'}}/>
             <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/for_2020_image_2.svg' alt='not found' style={{width:'120%'}}/>
+           </div>
            </div>
         </div>
       </div>
@@ -207,8 +209,8 @@ const Home = () => {
             </div>
       </div>
 
-      <div className='sixth-compo'>
-              <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/Bespoke+Mentors.webp' alt='not found' className='sixth-cont-img'/>
+      <div style={{background:'#bcf2fb',width:'100%',display:'flex',justifyContent:'center'}} >
+              <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/Bespoke+Mentors.webp' alt='not found'  width={'90%'}/>
       </div>
 
      <div>

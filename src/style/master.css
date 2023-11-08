@@ -591,6 +591,7 @@ box-shadow: 0px 1px 6px rgba(125, 124, 124, 0.161);
   }
   .sixth-enroll{
     flex-direction: column;
+    flex-wrap: wrap;
   }
   .sixth-enroll-date-box{
     width: 80%;

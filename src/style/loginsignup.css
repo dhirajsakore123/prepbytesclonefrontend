@@ -211,3 +211,86 @@ height: 70%;
      border: #4b8ce8;
  
  }
+@media only screen and (min-width:280px) and (max-width:500px){
+
+    .loginsignup{
+        flex-direction: column;
+        width: 100%;
+    }
+    .login-img{
+        display: none;
+    }
+    .middle-box{
+        width: 80%;
+    }
+    .pdlogo{
+        display: none;
+    }
+    .container-loginsignup{
+        width: 80%;
+    }
+
+    .login{
+        width: 100%;
+    }
+    .signuplogin-heading{
+        font-size: 1.2rem;
+    }
+    .login form{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    margin-top: 50px;
+    }
+    .middle-box{
+        display: none;
+    }
+}
+@media only screen and (min-width:500px) and (max-width:1027px){
+
+    .loginsignup{
+        flex-direction: column;
+        width: 100%;
+    }
+    .login-img{
+        display: none;
+    }
+    .middle-box{
+        width: 80%;
+    }
+    .pdlogo{
+        display: none;
+    }
+    .container-loginsignup{
+        width: 70%;
+    }
+
+    .login{
+        width: 100%;
+    }
+    .signuplogin-heading{
+        font-size: 1.2rem;
+    }
+    .login form{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    margin-top: 10vh;
+    }
+    .middle-box{
+        display: none;
+    }
+}
+@media only screen and (min-width:1027px) and (max-width:1500px){
+    .middle-box{
+        width: 250px;
+    }
+    .container-loginsignup{
+        width: 400px;
+    }
+    .loginsignup{
+        column-gap: 20px;
+    }
+}

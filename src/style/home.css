@@ -312,7 +312,7 @@ left: -2vw;
 }
 .forth-compo-inner2{
     /* border: 2px solid red; */
-    width: 26%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -339,6 +339,12 @@ left: -2vw;
     left: -3vw;
     top: 0px;
    
+}
+.forth-compo-inner2-box{
+    display: flex;
+    width: 50%;
+
+    /* border: 2px solid red; */
 }
 .know-more-text-cont{
     font-size: 1.2rem;
@@ -449,7 +455,7 @@ left: -2vw;
     display: flex;
     padding-top: 15vh;
   
-   height: 10vh;
+   min-height: 10vh;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -488,7 +494,8 @@ left: -2vw;
 .sixth-compo{
     background-color: #bcf2fb;
     width: 100%;
-    height: 150vh;
+    /* min-height: 150vh; */
+    /* height: max-content; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -497,6 +504,7 @@ left: -2vw;
 .sixth-cont-img{
     position: absolute;
     bottom: 0px;
+    width: 100%;
 }
 
 .home-mentor-data{
@@ -901,9 +909,123 @@ left: -2vw;
 
 }
 
-@media only screen and (min-width:280px) and (max-width:500px){
+@media only screen and (min-width:500px) and (max-width:1027px){
     
-    
-    
+    .know-more{
+        flex-direction: column-reverse;
+    }
+    .first-knowmore{
+        width: 100%;
+    }
+    .knowmore-btn{
+        height: 50px;
+    }
+    .mentorship-driven{
+        width: 100%;
+        justify-content: center;
+    }
+    .mentorship-driven-img{
+        position: absolute;
+        opacity: 0.1;
+        width: 100%;
+    }
+    .mentorship-driven-content{
+       width: 80%;
+       /* border: 2px solid red; */
+    }
+    .mentorship-driven-content-inner{
+        justify-content: center;
+    }
+    .alpha{
+        width:70%;
+    }
+    .alpha2{
+        width:70%;
+    }
+    .alpha3{
+        width:70%;
+    }
+    .alpha4{
+        width: 70%;
+    }
+    .mentorship-heading{
+        width: 100%;
+        text-align: center;
+    }
+    .iwantto-cards{
+        min-height: 20vh;
+    }
+    .iwantto-card-cont{
+        width: 90%;
+        row-gap: 30px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 0px;
+        padding-bottom: 3%;
+        min-height: 10vh;
+    }
+    .forth-compo{
+        /* border: 2px solid red; */
+        flex-direction: column
+    }
+    .forth-compo-heading{
+        text-align: center;
+    }
+    .forth-compo-inner{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .forth-compo-inner1{
+      width: 90%;
+      align-items: center;
+    }
+    .forth-compo-inner2-box{
+        width: 90%;
+    }
+    .fifth-compo{
+        width: 100%;
+    }
+    .fifth-compo-inner{
+        flex-direction: column;
+        align-items: center;
+        /* border: 2px solid red; */
+    }
+    .fifth-compo-card{
+        width:100%;
+    }
+    .fifth-compo-description-heading{
+        width: 100%;
+    }
+    .fifth-compo-description{
+        width: 100%;
+    }
+    .fifth-compo-description{
+        row-gap: 1vh;
+    }
+    .fifth-compo-inner1{
+        width: 80%;
+        row-gap: 30px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        min-height: 10vh;
+    }
+    .home-mentor-heading p:nth-child(2){
+        width: 100%;
+    }
+    .home-mentor-data{
+        width: 95%;
+        justify-content: space-around;
+    }
+    .home-last-three-cards-cont{
+        flex-wrap: wrap;
+        width: 95%;
+        row-gap: 20px;
+        justify-content: space-around;
+    }
+    .home-last-three-cards-cont-card{
+        width: 300px;
+    }
+   
 }
 

@@ -103,3 +103,25 @@
         row-gap: 0px;
     }
 }
+@media only screen and (min-width:500px) and (max-width:1027px){
+    .followus-text{
+        font-size: 0.7rem;
+    }
+    .interview-que{
+        row-gap: 0px;
+    }
+    .que-cat{
+        font-size: 1rem;
+        letter-spacing: 0px;
+
+    }
+    .socals-img{
+       width: 15px;
+    }
+    .inner-footer2{
+        font-size: 0.5rem;
+    }
+    .follow-us{
+        row-gap: 0px;
+    }
+}
