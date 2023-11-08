@@ -916,6 +916,7 @@ left: -2vw;
     }
     .first-knowmore{
         width: 100%;
+        box-sizing: border-box;
     }
     .knowmore-btn{
         height: 50px;
@@ -932,6 +933,9 @@ left: -2vw;
     .mentorship-driven-content{
        width: 80%;
        /* border: 2px solid red; */
+    }
+    .tech-box{
+        flex-wrap: wrap;
     }
     .mentorship-driven-content-inner{
         justify-content: center;
@@ -1027,5 +1031,19 @@ left: -2vw;
         width: 300px;
     }
    
+}
+@media only screen and (min-width:1027px) and (max-width:1400px)
+{
+    .first-line{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .first-knowmore{
+        box-sizing: border-box;
+    }
+.tech-box{
+   
+    flex-wrap: wrap;
+}
 }
 
