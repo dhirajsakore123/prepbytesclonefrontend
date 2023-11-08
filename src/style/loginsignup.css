@@ -283,7 +283,7 @@ height: 70%;
         display: none;
     }
 }
-@media only screen and (min-width:1027px) and (max-width:1500px){
+@media only screen and (min-width:1027px) and (max-width:1400px){
     .middle-box{
         width: 250px;
     }
