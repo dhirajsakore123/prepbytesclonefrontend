@@ -6,6 +6,7 @@ import Ethird from "../elevationmini/Ethird";
 import Efourth from "../elevationmini/Efourth";
 import Efifth from "../elevationmini/Efifth";
 import axios from 'axios'
+import Payment1 from "../routing/Payment1";
 const ElevationAcademey = () => {
   const [slide1, setSlide1] = useState(false);
   const [slide2, setSlide2] = useState(false);
@@ -46,7 +47,7 @@ const ElevationAcademey = () => {
             <p>→ Job Guarantee</p>
           </div>
           <div className="elevation-first-cont-btns">
-            <button className="elevation-first-cont-btn1">Apply Now</button>
+            <button className="elevation-first-cont-btn1" onClick={()=>window.scroll(4700,4700)} >Apply Now</button>
             <button className="elevation-first-cont-btn2">
               Get a call back
             </button>
@@ -897,7 +898,7 @@ const ElevationAcademey = () => {
               </div>
             <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/tag4-01.webp" alt="not found"/>
           </div>
-           <button className="elevation-eight-btn">Register</button>
+           <div className="elevation-eight-btn"><Payment1 amount={25000} name={"MASTER COMPETITIVE PROGRAMMING"}/></div>
            <div className="elevation-eight-cont3">
             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNS45OTgiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNS45OTggMTYiPgogIDxwYXRoIGlkPSJJY29uX2F3ZXNvbWUtY2hlY2stZG91YmxlIiBkYXRhLW5hbWU9Ikljb24gYXdlc29tZS1jaGVjay1kb3VibGUiIGQ9Ik0xNS43NzcsNS40NjEsMTQuNTQsNC4yMjNhLjc0Ny43NDcsMCwwLDAtMS4wNTksMEw2LDExLjcwNywyLjUxNiw4LjIyM2EuNzQ3Ljc0NywwLDAsMC0xLjA1OSwwTC4yMTcsOS40NjNhLjc1MS43NTEsMCwwLDAsMCwxLjA2Mmw1LjI0OSw1LjI1MmEuNzQ3Ljc0NywwLDAsMCwxLjA1OSwwbDkuMjQ5LTkuMjU1QS43NTMuNzUzLDAsMCwwLDE1Ljc3Nyw1LjQ2MVpNNS42NDQsOC43NzNhLjUuNSwwLDAsMCwuNzA2LDBsNi41LTYuNTA1YS41LjUsMCwwLDAsMC0uNzA2TDExLjQzNy4xNDZhLjUuNSwwLDAsMC0uNzA2LDBMNiw0Ljg3OSw0LjI2NiwzLjE0NWEuNS41LDAsMCwwLS43MDYsMEwyLjE0NSw0LjU2MWEuNS41LDAsMCwwLDAsLjcwNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDA0IDAuMDAyKSIgZmlsbD0iI2Y3ODA3NyIvPgo8L3N2Zz4K" alt="not found"/>
              <p>Guaranteed Placement of minimum 5 LPA</p>

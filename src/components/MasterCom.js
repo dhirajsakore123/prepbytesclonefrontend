@@ -27,7 +27,7 @@ const MasterCom = () => {
              <div className='master-first-cont1'>
                 <p>MASTER COMPETITIVE PROGRAMMING</p>
                 <p>Master Competitive Programming Fom Zero And Become A Top-Rated Coder <span>Under The Guidance Of Top Competitive Programmers</span></p>
-                <button>Enrole Now</button>
+                <button  onClick={()=>window.scrollTo(2700,2700)}>Enrole Now</button>
              </div>
              <img src='https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/mcp-header-image.webp' alt='not found'/>
         </div>

@@ -25,7 +25,7 @@ const Home = () => {
                 <p className='second-line'></p>
               </div>
               <div className='want-knowmore'>Want to know how PrepBytes can help you?</div>
-              <button className='knowmore-btn'>Know More</button>
+              <button className='knowmore-btn' onClick={()=>window.scrollTo(3300,3300)}>Know More</button>
          </div>
          <div className='second-knowmore'><img src={Main} alt='not found' className='home-main-img'/></div>
       </div>

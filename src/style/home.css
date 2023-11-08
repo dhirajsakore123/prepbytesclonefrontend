@@ -575,6 +575,17 @@ left: -2vw;
    border-top:1px solid rgba(128, 128, 128, 0.233) ;
    border-bottom:1px solid rgba(128, 128, 128, 0.203) ;
 }
+.home-mentor-data-card-description::-webkit-scrollbar{
+  width: 2px;
+}
+.home-mentor-data-card-description::-webkit-scrollbar-track{
+    background-color: #b8b8b8;
+   
+  }
+  .home-mentor-data-card-description::-webkit-scrollbar-thumb{
+    background-color: #00a5ec;
+   
+  }
 .home-mentor-data-card-com-img{
     position: absolute;
     bottom: 15px;
