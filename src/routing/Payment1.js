@@ -1,6 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// import { Toast } from 'react-toastify/dist/components';
+
 const Payment1 = (props) => {
     // const [data, setData] = useState('');
      console.log(props.Id)
@@ -35,7 +39,7 @@ const Payment1 = (props) => {
                       name:props.name,
                       userId:userId
                   })
-                  .then(res=>alert(res.data.msg))
+                  .then(res=>toast(res.data.msg))
                   .catch(err=>console.log(err))
                  }
                  if(props.name==="MASTER COMPETITIVE PROGRAMMING"){
@@ -43,7 +47,7 @@ const Payment1 = (props) => {
                       name:props.name,
                       userId:userId
                   })
-                  .then(res=>alert(res.data.msg))
+                  .then(res=>toast(res.data.msg))
                   .catch(err=>console.log(err))
                  }
               }
@@ -66,7 +70,7 @@ const Payment1 = (props) => {
         }
        } 
        else{
-        alert('please loggIn')
+       toast('please loggIn')
        }
     }
 
@@ -74,9 +78,10 @@ const Payment1 = (props) => {
 
 
     return (
-       
+       <>
             <button style={{width:"100%",height:"100%"}} className='mocktest-card-btn' onClick={handlePayment}>Enroll Now</button>
-       
+       <ToastContainer/>
+       </>
     );
 };
 export default Payment1
