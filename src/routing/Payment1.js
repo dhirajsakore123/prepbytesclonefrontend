@@ -9,7 +9,7 @@ const Payment1 = (props) => {
       const handlePayment=async()=>{
        if(loggedIn){
         try {
-          const response = await axios.post('http://localhost:4000/api/razorpay',{
+          const response = await axios.post('https://prepbytesclone.onrender.com/api/razorpay',{
               amount:props.amount*100
           });
           const { data } = response;
