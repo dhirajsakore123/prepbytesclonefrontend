@@ -724,40 +724,48 @@ left: -2vw;
     }
     .mentorship-driven{
         width: 100%;
+        justify-content: center;
     }
     .mentorship-driven-img{
-      position: absolute;
-      opacity: 0.3;
-      width:100%;
-
+        position: absolute;
+        opacity: 0.1;
+        width: 100%;
     }
     .mentorship-driven-content{
-      /* position: absolute; */
-       width: 100%;
+       width: 80%;
+       /* border: 2px solid red; */
     }
-    .mentorship-driven-content-inner1{
-       display: flex;
-       justify-content: center;
+    .tech-box{
+        flex-wrap: wrap;
+    }
+    .mentorship-driven-content-inner{
+        justify-content: center;
+    }
+    .alpha{
+        width:70%;
+        font-size: 0.7rem;
+    }
+    .alpha2{
+        width:70%;
+        font-size: 0.7rem;
+    }
+    .alpha3{
+        width:70%;
+        font-size: 0.7rem;
+    }
+    .alpha4{
+        width: 70%;
+        font-size: 0.7rem;
+        padding-left:30px;
+    }
+    .mentorship-para{
+        font-size: 0.7rem;
     }
     .mentorship-heading{
         font-size: 1.5rem;
-        text-align: center;
     }
-    .alpha{
-        width: 40%;
-        height: 40%;;
-    }
-    .alpha2{
-        width: 40%;
-        height: 40%;
-    }
-    .alpha3{
-        width: 40%;
-        height: 40%;
-    }
-    .alpha4{
-        width: 40%;
-        height: 40%;
+    .alpha-img{
+        left: -20px;
     }
     .iwantto-heading{
         /* padding: 5%; */
